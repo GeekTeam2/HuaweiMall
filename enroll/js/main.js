@@ -1,0 +1,9 @@
+require({
+	paths:{
+		jquery:"jquery",
+		enroll:"module-enroll"
+	}
+})
+require(["jquery","enroll"],function($,enroll){
+	enroll.enroll();
+})
