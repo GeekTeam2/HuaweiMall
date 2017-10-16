@@ -2,9 +2,10 @@ define(function(){
 	
 	function enroll(){
 		//切换手机邮箱
-		$(".reg-tab").find(".l").click(function(){
+		$(".reg-tab").find(".l").click(function(ev){
 			$(".reg-tab").find(".l").removeClass("sel");
 			$(this).addClass("sel");
+			return false;
 		})
 		//邮箱验证
 		$("#email").blur(function(){
@@ -203,7 +204,7 @@ define(function(){
 			}
 		}
 		//注册验证
-		$("#btnSubmit").click(function(){
+		$("#btnSubmit").click(function(ev){
 			if($("#email").val() == ""){
 				var html = '电子邮箱为空，请正确填写';
 				$("#errormsgemail-box").addClass("input-error-EMUI5");
@@ -235,8 +236,9 @@ define(function(){
 				emailCodeVerify();
 				passwordVerify();
 				confirmPwdVerify();
+				//验证成功，提交数据
 			}
-			
+			return false;
 		})
 	}
 	return {enroll:enroll}

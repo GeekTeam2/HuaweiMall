@@ -297,8 +297,10 @@ div {
   text-align: center; }
 
 .reg-btn .btn {
+  display: inline-block;
   width: 200px;
   height: 40px;
+  line-height: 40px;
   background-color: #B40707;
   border: none;
   -webkit-border-radius: 20px;
