@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>		
+		<link href = "../css/login.css" type = "text/css" rel = "stylesheet"/>
+	</head>
+	<body>
+		<div>
+			<div id = "login-head">
+				<div id = "head-center">
+					<div id = "main-logo">
+						<img src = "../img/login/huaweiLogo.png">
+					</div>
+					<div id="website-name" style="color:#999;">
+					<b style="font-size: 18px;margin-top: -2px;float: left;color:#cccccc;">|</b>
+					<b style="font-size: 18px;margin-top: -1px;float: left; margin-left:18px;color:#333333">华为商城</b>
+				</div>
+				</div>
+			</div>
+			<div id = "login-bg">
+				<div id = "login-bg-g">
+					<div style="background-image: url('../img/login/login_default_bg.png')" class = "login_content_bg"></div>
+					<div id = "login-area">
+						<div id = "login-area-block">
+							<div class="h">
+								<span id="loginTitle" class = "active">帐号登录</span>
+								<span id="loginTitle1" data-type="qrCode">扫码登录</span>	
+							</div>
+							<div id = "b-account" style = "display: block;">
+								<form>
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr style="	border-bottom: 1px solid #cccccc;">
+										<td>
+											<input type = "text" placeholder="手机号/邮件地址" class = "input-first" id = "name-error">											
+										</td>
+									</tr>
+									<tr id ="name-error-tr">
+										<td>
+											<span id = "name-error">请输入您的账号</span>
+										</td>
+									</tr>
+									<tr style="	border-bottom: 1px solid #cccccc;">
+										<td>
+											<input type = "password" placeholder="密码"
+											class = "input-first">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div id="captcha"></div>
+										</td>
+									</tr>
+									<tr>
+										<td class="mt-checkbox">
+											<input type="checkbox" id="remember_name">
+											<label id="check-label">记住华为帐号</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="button" id="btnLogin" value="登录">
+										</td>
+									</tr>
+									<tr>
+										<td class="mt-links">
+											<span class="mt-links-float">
+												<a class="regist-vam" href="#">注册帐号</a>
+												<a class="forgot-vam" href="#"> 忘记密码？</a>
+											</span>
+										</td>
+									</tr>
+								</table>
+								</form>
+								<div id="login-tips">
+									<div class="thirdLintTitle">
+										<i class="line-left"></i>
+										<span class="third-tips">其他方式登录</span>
+										<i class="line-right"></i>
+									</div>
+									<div class="thirdLoginDiv">
+										<span class="qqLogin_bigIco" title="QQ" >
+											<a href="#"></a>
+										</span>
+										<span class="alipayLogin_bigIco" title="支付宝">
+											<a href="#"></a>
+										</span>
+										<span class="weixinLogin_bigIco" title="微信">
+											<a href="#"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id = "footer">
+			<!-- 底部  -->
+				<div class="wp">
+					<p id ="wp-first">			
+						<a href="#" class="rule">用户协议</a>
+						<em class="foot_em">|</em>
+						<a href="#" class="rule">隐私政策</a>
+						<em class="foot_em">|</em>
+						<a href="#" class="ifaq">常见问题</a>
+					</p>
+					<p class="wp-two">Copyright © 2011-2017    华为技术有限公司   版权所有   保留一切权利</p>
+					<p class="wp-two">苏B2-20070200号           |           苏ICP备09062682号-9</p>	
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type = "text/javascript" src = "../js/require.js" defer async = "true" data-main = "../js/main-login.js"></script>
+</html>
