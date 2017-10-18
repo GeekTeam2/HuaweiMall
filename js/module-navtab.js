@@ -18,7 +18,7 @@ define(function(){
 			
 			timer = setTimeout(function(){
 				if(isNone){
-					$(".nav-sub").animate({height:"259px"},600,'easeOutExpo',function(){
+					$(".nav-sub").stop(true,true).animate({height:"259px"},600,'easeOutExpo',function(){
 						isNone = false;
 					});
 				}
