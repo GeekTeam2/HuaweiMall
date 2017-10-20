@@ -19,6 +19,32 @@ define(["jquery"],function($){
 			alert("1");
 			$("#name-error-tr").css("display", "block");
 		}
+		$("#btnLogin").on("click", function(){
+			alert("1");
+			var username = $("#name-error").val();
+			var password = $("#password").val();
+			alert(username);
+			alert(password);
+			$.ajax({				
+				url:"http://10.30.151.90/HuaWei/servlet/UserServlet?method=login",
+				type:"GET",
+				data:{
+					"username":username,
+					"password":password
+				},
+				success:function(results){
+					if(results == 0){
+						alert("失败。");
+					}else if(results == 1){
+						alert("成功。");
+					}							
+				},
+				error:function(){
+					alert("GG");
+				}
+			})
+		 })
+		
 	}
 	return{
 		login:login
