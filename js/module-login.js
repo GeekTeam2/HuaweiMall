@@ -23,16 +23,13 @@ define(["jquery"],function($){
 			alert("1");
 			var username = $("#name-error").val();
 			var password = $("#password").val();
-			alert(username);
-			alert(password);
 			$.ajax({				
 				url:"http://10.30.151.90/HuaWei/servlet/UserServlet?method=login",
-				type:"GET",
-				data:{
-					"username":username,
-					"password":password
-				},
+				type:"POST",
+				data:"{username:" + username + ",password:" + password + "}",
+					
 				success:function(results){
+					alert("获取到返回值")
 					if(results == 0){
 						alert("失败。");
 					}else if(results == 1){
@@ -40,7 +37,7 @@ define(["jquery"],function($){
 					}							
 				},
 				error:function(){
-					alert("GG");
+					alert("error");
 				}
 			})
 		 })
