@@ -29,8 +29,9 @@ define(function(){
 		}
 		
 		//图形验证 验证码动态变化
-		$("#randomCodeImg").click(function(){
+		$("#randomCodeImg").click(function(ev){
 			createCode();
+			return false;
 		})
 		var code;
 		function createCode() {
@@ -237,6 +238,24 @@ define(function(){
 				passwordVerify();
 				confirmPwdVerify();
 				//验证成功，提交数据
+				var email = $("#email").val();
+				var password = $("#password").val();
+				$.ajax({
+					url:"",
+					type:"POST",
+					data:"{username:" + email + ",password:" + password +"}",
+					success:function(results){
+						alert("成功接收到返回值");
+						if(results == "0"){
+							localtion.reload();
+						}else if(results == 1){
+							alert('注册成功');
+						}
+					},
+					error:function(){
+						alert("ERROR");
+					}
+				})
 			}
 			return false;
 		})

@@ -154,7 +154,11 @@ div {
   padding: 0 16px;
   line-height: 42px;
   float: left; }
-
+.input-container .input-left::after{
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
 .input-container .input-right {
   height: 100%;
   padding-right: 16px;
