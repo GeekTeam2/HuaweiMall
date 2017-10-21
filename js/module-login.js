@@ -31,7 +31,7 @@ define(["jquery"],function($){
 					if(results.code == 0){
 						alert("请输入正确的用户名或密码");
 					}else if(results.code == 1){
-						$.cookie("login-status","name:" + results.name + "email:" + results.email);
+						$.cookie("login-status","name:" + results.content.name + "email:" + results.content.email);
 						location.href = "../html/index.html";
 					}							
 				},
