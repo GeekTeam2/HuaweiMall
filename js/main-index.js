@@ -1,11 +1,19 @@
 require.config({
 	paths:{
-		"navtab":"module-navtab",
 		"jquery":"jquery",
-		"jquery.easing":"module-jquery-easing",
+		"carousel":"module-carousel",
+		"indexPart":"module-index-part",
 	}
 })
 
-require(["navtab","jquery.easing","jquery"],function(navtab, $){
-	navtab.func();
+require(["jquery","carousel"],function($, carousel){
+	carousel.start($(".hot-board"),8);
+	carousel.start($(".hotsell-banner"),6);
+})
+
+require(["jquery","indexPart"],function($, indexPart){
+	indexPart.widthInit();
+	indexPart.notice();
+	indexPart.tabNav();
+	indexPart.scroll($(".recommend-goods"),1090,1199);
 })

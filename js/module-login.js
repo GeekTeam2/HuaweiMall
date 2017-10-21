@@ -28,10 +28,13 @@ define(["jquery"],function($){
 				data:{"username" : username, "password" : password},
 					
 				success:function(results){
-					if(results.code == 0){
+
+					var resData = JSON.parse(results);
+
+					if(resData.code == 0){
 						alert("请输入正确的用户名或密码");
-					}else if(results.code == 1){
-						$.cookie("login-status","name:" + results.content.name + "email:" + results.content.email);
+					}else if(resData.code == 1){
+						$.cookie("login-status","name:" + resData.content.name + "email:" + resData.content.email);
 						location.href = "../html/index.html";
 					}							
 				},

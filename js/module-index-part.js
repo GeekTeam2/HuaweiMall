@@ -13,10 +13,10 @@ define(function(){
 		})
 
 		function resizeImg(){
-			var $width = $(".slider").width();
-			if($(".slider").width() >= 1200){
-				var $left = - (1903 - $(".slider").width()) / 2;
-				$(".slider").find("img").css("left",$left + "px");
+			var $width = $("#index-slider").width();
+			if($("#index-slider").width() >= 1200){
+				var $left = - (1903 - $("#index-slider").width()) / 2;
+				$("#index-slider").find("img").css("left",$left + "px");
 			}
 		}
 	}
