@@ -16,11 +16,9 @@ define(["jquery","cookie"],function($){
 		})
 		var b = $("#name-error").val();
 		if(b.length != "0"){
-			alert("1");
 			$("#name-error-tr").css("display", "block");
 		}
 		$("#btnLogin").on("click", function(){
-			alert("1");
 			var username = $("#name-error").val();
 			var password = $("#password").val();
 			$.ajax({				
