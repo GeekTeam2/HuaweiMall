@@ -35,9 +35,7 @@ define(function(){
 			}
 			
 		},2000);
-
 	}
-
 
 	var tabNav = function(){
 
@@ -46,7 +44,6 @@ define(function(){
 		},function(){
 			$(this).find(".category-panels").css("display","none");
 		})
-
 	}
 
 	var scroll = function(node,num1,num2){
@@ -129,9 +126,6 @@ define(function(){
 		})
 	}
 
-
-
-	
 
 	return {
 		widthInit:widthInit,
