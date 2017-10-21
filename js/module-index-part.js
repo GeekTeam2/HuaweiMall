@@ -59,13 +59,12 @@ define(function(){
 				count++;
 				isAble();
 				$marginLeft -= num1;
-				node.find(".grid-list").animate({'margin-left': $marginLeft + 'px'},500);
-				console.log(count);
+				node.find(".scroll-list").animate({'margin-left': $marginLeft + 'px'},500);
 			}else if(count == 1){
 				count++;
 				isAble();
 				$marginLeft -= num2;
-				node.find(".grid-list").animate({'margin-left': $marginLeft + 'px'},500);
+				node.find(".scroll-list").animate({'margin-left': $marginLeft + 'px'},500);
 			}
 			else{
 				count = 2;
@@ -77,12 +76,12 @@ define(function(){
 				count--;
 				isAble();
 				$marginLeft += num2;
-				node.find(".grid-list").animate({'margin-left': $marginLeft + 'px'},500);
+				node.find(".scroll-list").animate({'margin-left': $marginLeft + 'px'},500);
 			}else if(count == 1){
 				count--;
 				isAble();
 				$marginLeft += num1;
-				node.find(".grid-list").animate({'margin-left': $marginLeft + 'px'},500);
+				node.find(".scroll-list").animate({'margin-left': $marginLeft + 'px'},500);
 			}
 			else{
 				count = 0;
@@ -100,11 +99,46 @@ define(function(){
 		}
 	}
 
+	var scrollSpecial = function(node){
+
+		var countSpecial = 0;
+		var $marginLeft = 0
+
+		node.find(".btn-next").on('click',function(){	
+			if(countSpecial == 0){
+				countSpecial++;
+				node.find(".btn-prev").addClass("able").removeClass('disabled');
+				$(this).removeClass('able').addClass("disabled");
+				$marginLeft -= 981;
+				node.find(".scroll-list").animate({'margin-left': $marginLeft + 'px'},500);
+			}else{
+				countSpecial = 1;
+			}	
+		})
+
+		node.find(".btn-prev").on('click',function(){
+			if(countSpecial == 1){
+				countSpecial--;
+				node.find(".btn-next").addClass("able").removeClass('disabled');
+				$(this).removeClass('able').addClass("disabled");
+				$marginLeft += 981;
+				node.find(".scroll-list").animate({'margin-left': $marginLeft + 'px'},500);
+			}else{
+				countSpecial = 0;
+			}	
+		})
+	}
+
+
+
+	
+
 	return {
 		widthInit:widthInit,
 		notice:notice,
 		tabNav:tabNav,
-		scroll:scroll
+		scroll:scroll,
+		scrollSpecial:scrollSpecial
 	}
 
 })

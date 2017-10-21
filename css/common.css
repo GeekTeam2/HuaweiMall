@@ -401,8 +401,9 @@ html body span.clear {
           text-align: center; }
 
 .main {
-  /*background-color: #F0F0F0; }*/
-}
+  height: 2000px;
+  background-color: #F0F0F0; }
+
 .slogan-frame {
   border-top: 1px solid #EAEAEA;
   line-height: 1.5;
