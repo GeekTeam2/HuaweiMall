@@ -241,19 +241,17 @@ define(function(){
 				var email = $("#email").val();
 				var password = $("#password").val();
 				$.ajax({
-					url:"",
+					url:"../servlet/RegistServlet1?method=regist",
 					type:"POST",
-					data:"{username:" + email + ",password:" + password +"}",
+					data:{"email" :email ,"password" : password },
 					success:function(results){
-						alert("成功接收到返回值");
-						if(results == "0"){
+						var resData = JSON.parse(results);
+						if(resData.code == 0){
 							localtion.reload();
-						}else if(results == 1){
+						}else if(resData.code == 1){
 							alert('注册成功');
+							location.href = '../html/login.html';
 						}
-					},
-					error:function(){
-						alert("ERROR");
 					}
 				})
 			}
@@ -262,3 +260,5 @@ define(function(){
 	}
 	return {enroll:enroll}
 })
+
+
