@@ -1,4 +1,5 @@
-define(["jquery","cookie"],function($){
+define(["jquery"],function($){
+
 	var login = function(){
 		$("#loginTitle1").on("click", function(){
 			$("#loginTitle").attr("class", "");
