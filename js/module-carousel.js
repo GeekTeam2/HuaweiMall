@@ -10,6 +10,7 @@ define(function(){
 		node.find(".slider").hover(function(){
 			clearInterval(timer);
 		},function(){
+			clearInterval(timer)
 			interval(num);
 		})
 

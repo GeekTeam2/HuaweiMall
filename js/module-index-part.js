@@ -23,9 +23,9 @@ define(function(){
 
 	var notice = function(){
 		var num = 0;
-		var timer = null;
-
-		timer = setInterval(function(){
+		var noticetimer = null;
+		
+		noticetimer = setInterval(function(){
 			num = num - 48;
 			if(num <= -288){
 				num = -48;
