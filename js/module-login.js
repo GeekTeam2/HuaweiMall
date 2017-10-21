@@ -1,4 +1,4 @@
-define(["jquery"],function($){
+define(["jquery","cookie"],function($){
 	var login = function(){
 		$("#loginTitle1").on("click", function(){
 			$("#loginTitle").attr("class", "");
@@ -24,20 +24,20 @@ define(["jquery"],function($){
 			var username = $("#name-error").val();
 			var password = $("#password").val();
 			$.ajax({				
-				url:"http://10.30.151.90/HuaWei/servlet/UserServlet?method=login",
+				url:"../servlet/UserServlet?method=login ",
 				type:"POST",
-				data:"{username:" + username + ",password:" + password + "}",
+				data:{"username" : username, "password" : password},
 					
 				success:function(results){
-					alert("获取到返回值")
-					if(results == 0){
-						alert("失败。");
-					}else if(results == 1){
-						alert("成功。");
+					if(results.code == 0){
+						alert("请输入正确的用户名或密码");
+					}else if(results.code == 1){
+						$.cookie("login-status","name:" + results.name + "email:" + results.email);
+						location.href = "../html/index.html";
 					}							
 				},
 				error:function(){
-					alert("error");
+					alert("服务器似乎发生了一些问题");
 				}
 			})
 		 })

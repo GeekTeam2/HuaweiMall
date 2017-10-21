@@ -2,9 +2,10 @@ require.config({
 	paths:{
 		"login": "module-login",
 		"jquery":"jquery",
+		"cookie":"jquery.cookie"
 	}
 })
-require(["jquery","login"],function($,login){
+require(["jquery","cookie","login"],function($,login){
 
 	login.login();
 })
