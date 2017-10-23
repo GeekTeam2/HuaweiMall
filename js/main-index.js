@@ -20,6 +20,7 @@ require(["jquery","indexPart"],function($, indexPart){
 	indexPart.scroll($("#smartHome"),1090,545);
 	indexPart.scroll($("#hotsellpart"),1090,545);
 	indexPart.scrollSpecial($("#brandpart"));
+	indexPart.eventFloat();
 })
 
 require(["jquery","backToTop"],function($, backToTop){

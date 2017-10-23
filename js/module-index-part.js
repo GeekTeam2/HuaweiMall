@@ -22,9 +22,11 @@ define(function(){
 	}
 
 	var notice = function(){
+		clearInterval(noticetimer);
+
 		var num = 0;
 		var noticetimer = null;
-		
+
 		noticetimer = setInterval(function(){
 			num = num - 48;
 			if(num <= -288){
@@ -126,13 +128,45 @@ define(function(){
 		})
 	}
 
+	var eventFloat = function(){
+		
+		$(window).on("scroll", function(){
+			var $top = $(window).scrollTop();
+			var $barlists = $('.event-float').find("b");
+
+			if($top > 1400 && $top < 7600){
+				$(".event-float").fadeIn(300);
+				if($top > 1600 && $top < 2400){
+					$barlists.css('width',0).eq(0).css('width',"100%");
+				}else if($top > 2400 && $top <= 3000){
+					$barlists.css('width',0).eq(1).css('width',"100%");
+				}else if($top > 3000 && $top <= 3600){
+					$barlists.css('width',0).eq(2).css('width',"100%");
+				}else if($top > 3600 && $top <= 4600){
+					$barlists.css('width',0).eq(3).css('width',"100%");
+				}else if($top > 4600 && $top <= 5600){
+					$barlists.css('width',0).eq(4).css('width',"100%");
+				}else if($top > 5600 && $top <= 6400){
+					$barlists.css('width',0).eq(5).css('width',"100%");
+				}else if($top > 6400 && $top <= 7400){
+					$barlists.css('width',0).eq(6).css('width',"100%");
+				}else{
+					$barlists.css('width',0);
+				}
+			}else{
+				$(".event-float").fadeOut(300);
+			}
+
+		})
+	}
 
 	return {
 		widthInit:widthInit,
 		notice:notice,
 		tabNav:tabNav,
 		scroll:scroll,
-		scrollSpecial:scrollSpecial
+		scrollSpecial:scrollSpecial,
+		eventFloat:eventFloat
 	}
 
 })
