@@ -723,7 +723,8 @@ body {
   top: 33%;
   right: 0;
   width: 100px;
-  background: transparent; }
+  background: transparent;
+  display: none; }
   .event-float .event-box {
     width: 100px; }
     .event-float .event-box .hover-list li {
