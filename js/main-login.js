@@ -5,7 +5,7 @@ require.config({
 		"cookie":"jquery.cookie"
 	}
 })
-require(["jquery","cookie","login"],function($,$,login){
+require(["jquery","cookie","login"],function($,login){
 
 	login.login();
 })
