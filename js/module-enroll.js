@@ -238,12 +238,13 @@ define(function(){
 				passwordVerify();
 				confirmPwdVerify();
 				//验证成功，提交数据
+				var username = $("#username").val();
 				var email = $("#email").val();
 				var password = $("#password").val();
 				$.ajax({
 					url:"../servlet/RegistServlet1?method=regist",
 					type:"POST",
-					data:{"email" :email ,"password" : password },
+					data:{"username":username, "email" :email , "password" : password },
 					success:function(results){
 						var resData = JSON.parse(results);
 						if(resData.code == 0){

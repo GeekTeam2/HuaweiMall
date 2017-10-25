@@ -36,14 +36,12 @@
 				</div>
 			</div>
 			<form  class="reg-detail">
-				<div class="input-container">
-					<div class="input-left">国家</div>
-					<div class="input-content" style="margin-left: 123px;">
-						<div class="node-input">
-							<span class="select-text">中国</span>
-							<div class="select-ico"></div>
-						</div>
+				<div class="input-container" id="errormsguser-box">
+					<div class="input-left">用户名</div>
+					<div class="input-content">
+						<input type="text"  id="username" placeholder="请输入用户名" class="text" maxlength="50" />
 					</div>
+					<span id="msg_name" ></span>
 				</div>
 				<div class="input-container" id="errormsgemail-box">
 					<div class="input-left">邮件地址</div>
