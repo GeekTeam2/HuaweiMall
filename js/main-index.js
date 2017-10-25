@@ -6,7 +6,8 @@ require.config({
 		"backToTop":"module-backToTop",
 		"imgLoad":"module-imgLoad",
 		"cookie":"jquery.cookie",
-		"infoLoad":"module-infoLoad"
+		"infoLoad":"module-infoLoad",
+		"status":"module-loginStatus"
 	}
 })
 
@@ -37,4 +38,8 @@ require(['jquery','imgLoad'],function($, imgLoad){
 
 require(['jquery','infoLoad'],function($, infoLoad){
 	infoLoad.load();
+})
+
+require(['jquery','cookie','status'],function($, status){
+	status.isLogin();
 })
