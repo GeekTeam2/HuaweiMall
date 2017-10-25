@@ -2,8 +2,8 @@ define(function(){
    var func = function(){
       $.ajax({
          type: "POST",
-         url: "url",
-         data: "sort",
+         data: {sort:"热销商品"},
+         url: "../servlet/ProductServlet?method=showInfo",
          success: function (response) {
             alert(response);
          }

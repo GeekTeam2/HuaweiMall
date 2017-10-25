@@ -20,12 +20,12 @@ define(["jquery"],function($){
 			$("#name-error-tr").css("display", "block");
 		}
 		$("#btnLogin").on("click", function(){
-			var username = $("#name-error").val();
+			var email = $("#name-error").val();
 			var password = $("#password").val();
 			$.ajax({				
 				url:"../servlet/UserServlet?method=login ",
 				type:"POST",
-				data:{"username" : username, "password" : password},
+				data:{"email" : email, "password" : password},
 					
 				success:function(results){
 

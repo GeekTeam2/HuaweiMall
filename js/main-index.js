@@ -40,6 +40,6 @@ require(['jquery','infoLoad'],function($, infoLoad){
 	infoLoad.load();
 })
 
-require(['jquery','cookie','status'],function($, status){
+require(['jquery','cookie','status'],function($,$, status){
 	status.isLogin();
 })
