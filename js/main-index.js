@@ -3,6 +3,7 @@ require.config({
 		"jquery":"jquery",
 		"carousel":"module-carousel",
 		"indexPart":"module-index-part",
+		"backToTop":"module-backToTop"
 	}
 })
 
@@ -15,5 +16,13 @@ require(["jquery","indexPart"],function($, indexPart){
 	indexPart.widthInit();
 	indexPart.notice();
 	indexPart.tabNav();
-	indexPart.scroll($(".recommend-goods"),1090,1199);
+	indexPart.scroll($(".recommend"),1090,1199);
+	indexPart.scroll($("#smartHome"),1090,545);
+	indexPart.scroll($("#hotsellpart"),1090,545);
+	indexPart.scrollSpecial($("#brandpart"));
+	indexPart.eventFloat();
+})
+
+require(["jquery","backToTop"],function($, backToTop){
+	backToTop.start();
 })

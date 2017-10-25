@@ -519,38 +519,39 @@ body {
 .recommend {
   margin: 0 auto;
   width: 1200px; }
-  .recommend .recommend-goods {
-    width: 1200px;
-    height: 305px;
-    overflow: hidden;
-    position: relative; }
-  .recommend .grid-list {
+
+.scroll-box {
+  width: 1200px;
+  height: 305px;
+  overflow: hidden;
+  position: relative; }
+  .scroll-box .scroll-list {
     width: 3504px;
     margin-left: 0px; }
-  .recommend .grid-items:first-child {
+  .scroll-box .grid-items:first-child {
     border-left: 1px solid transparent; }
-  .recommend .grid-items {
+  .scroll-box .grid-items {
     border-left: 1px solid #F5F5F5;
     margin: 0;
     width: 217px; }
-    .recommend .grid-items .grid-title {
+    .scroll-box .grid-items .grid-title {
       padding-top: 10px;
       width: 227px;
       height: 38px; }
-    .recommend .grid-items .grid-img {
+    .scroll-box .grid-items .grid-img {
       height: 134px;
       width: 134px;
       margin: 38px auto 0; }
-      .recommend .grid-items .grid-img img {
+      .scroll-box .grid-items .grid-img img {
         height: 134px;
         width: 134px; }
-    .recommend .grid-items .grid-desc {
+    .scroll-box .grid-items .grid-desc {
       margin: 0;
       line-height: 24px; }
-    .recommend .grid-items .grid-price {
+    .scroll-box .grid-items .grid-price {
       margin: 0;
       line-height: 28px; }
-  .recommend .grid-btn {
+  .scroll-box .grid-btn {
     background: #CCC;
     background: rgba(204, 204, 204, 0.9);
     cursor: pointer;
@@ -561,22 +562,22 @@ body {
     position: absolute;
     top: 50%;
     z-index: 3; }
-    .recommend .grid-btn span {
+    .scroll-box .grid-btn span {
       display: block;
       margin: 28px auto;
       height: 16px;
       width: 11px;
       background: url(../img/index/icon-common.png) no-repeat; }
-  .recommend .btn-prev {
+  .scroll-box .btn-prev {
     left: 0; }
-    .recommend .btn-prev span {
+    .scroll-box .btn-prev span {
       background-position: -101px -1px; }
-  .recommend .btn-next span {
+  .scroll-box .btn-next span {
     background-position: -112px -1px; }
-  .recommend .disabled {
+  .scroll-box .disabled {
     background: #f0f0f0;
     cursor: not-allowed; }
-  .recommend .able:hover {
+  .scroll-box .able:hover {
     background: rgba(153, 153, 153, 0.9); }
 
 .hotsell-banner {
@@ -624,6 +625,8 @@ body {
 .main-part {
   width: 1200px;
   margin: 0 auto; }
+  .main-part .scroll-box {
+    padding-top: 12px; }
 
 .part-content .h {
   overflow: hidden;
@@ -632,7 +635,8 @@ body {
   position: relative; }
 .part-content .part-title {
   color: #333;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 .part-content .part-nav {
   margin-left: 28px; }
   .part-content .part-nav li {
@@ -685,6 +689,9 @@ body {
     padding-top: 26px;
     white-space: normal;
     line-height: 1.1; }
+  .part-content .b .grid-items .grid-tips {
+    top: 167px;
+    right: 52px; }
 .part-content .b .grid-items-md .thumb {
   display: inline-block;
   height: 100%;
@@ -692,3 +699,52 @@ body {
   .part-content .b .grid-items-md .thumb img {
     width: 291px;
     height: 346px; }
+.part-content .b .grid-items-lg {
+  width: 594px !important; }
+  .part-content .b .grid-items-lg .thumb {
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
+    .part-content .b .grid-items-lg .thumb img {
+      width: 594px;
+      height: 346px; }
+
+.main-part-frame {
+  padding-bottom: 20px; }
+
+.main-floor {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 60px; }
+
+.event-float {
+  position: fixed;
+  z-index: 10;
+  top: 33%;
+  right: 0;
+  width: 100px;
+  background: transparent;
+  display: none; }
+  .event-float .event-box {
+    width: 100px; }
+    .event-float .event-box .hover-list li {
+      text-align: right;
+      padding-right: 12px;
+      border-bottom: 1px solid transparent;
+      font-size: 12px;
+      line-height: 46px;
+      position: relative; }
+    .event-float .event-box .hover-list b {
+      position: absolute;
+      width: 0;
+      background: #ca151d;
+      height: 1px;
+      transition: width .5s ease;
+      bottom: -1px;
+      right: 0;
+      display: block; }
+    .event-float .event-box .hover-list a {
+      color: #666;
+      transition: all .5s ease; }
+    .event-float .event-box .hover a {
+      color: #ca151d; }
