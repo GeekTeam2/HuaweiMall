@@ -27,8 +27,8 @@ define(function(){
 		function core(){
 			var $list = node.find(".slider").find(".banner-item");
 			$list.css("z-index", 0).eq(currentIndex).css("z-index", 12);
-			$list.eq(lastIndex).animate({opacity:0},500);
-			$list.eq(currentIndex).animate({opacity:1},500);
+			$list.eq(lastIndex).stop().animate({opacity:0},500);
+			$list.eq(currentIndex).stop().animate({opacity:1},500);
 			lastIndex = currentIndex;
 		}
 

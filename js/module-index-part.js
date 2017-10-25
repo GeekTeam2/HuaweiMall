@@ -31,7 +31,7 @@ define(function(){
 			num = num - 48;
 			if(num <= -288){
 				num = -48;
-				$(".notice-list").css('margin-top', 0).animate({'margin-top': num + 'px'},500);
+				$(".notice-list").css('margin-top', 0).stop().animate({'margin-top': num + 'px'},500);
 			}else{
 				$(".notice-list").animate({'margin-top': num + 'px'},500);
 			}
