@@ -5,7 +5,8 @@ require.config({
 		"indexPart":"module-index-part",
 		"backToTop":"module-backToTop",
 		"imgLoad":"module-imgLoad",
-		"cookie":"jquery.cookie"
+		"cookie":"jquery.cookie",
+		"infoLoad":"module-infoLoad"
 	}
 })
 
@@ -32,4 +33,8 @@ require(["jquery","backToTop"],function($, backToTop){
 require(['jquery','imgLoad'],function($, imgLoad){
 	var node = $(".hot-board").find(".slider");
 	imgLoad.load(node);
+})
+
+require(['jquery','infoLoad'],function($, infoLoad){
+	infoLoad.load();
 })
