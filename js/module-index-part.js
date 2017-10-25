@@ -33,7 +33,7 @@ define(function(){
 				num = -48;
 				$(".notice-list").css('margin-top', 0).stop().animate({'margin-top': num + 'px'},500);
 			}else{
-				$(".notice-list").animate({'margin-top': num + 'px'},500);
+				$(".notice-list").stop().animate({'margin-top': num + 'px'},500);
 			}
 			
 		},2000);
