@@ -3,7 +3,9 @@ require.config({
 		"jquery":"jquery",
 		"carousel":"module-carousel",
 		"indexPart":"module-index-part",
-		"backToTop":"module-backToTop"
+		"backToTop":"module-backToTop",
+		"imgLoad":"module-imgLoad",
+		"cookie":"jquery.cookie"
 	}
 })
 
@@ -25,4 +27,9 @@ require(["jquery","indexPart"],function($, indexPart){
 
 require(["jquery","backToTop"],function($, backToTop){
 	backToTop.start();
+})
+
+require(['jquery','imgLoad'],function($, imgLoad){
+	var node = $(".hot-board").find(".slider");
+	imgLoad.load(node);
 })
