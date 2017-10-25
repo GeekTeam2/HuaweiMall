@@ -72,10 +72,11 @@
 #pro_gallerys{
 	overflow: hidden;
 	position: absolute;
+	width: 372px;
 }
 #pro_gallerys li{
 	float: left;
-	padding: 0 5px;
+	margin: 0 6px;
 }
 #pro_gallerys li img{
 	width: 50px;
@@ -86,7 +87,6 @@
 .product_right{
 	float: right;
 	width: 720px;
-	/*border: 1px solid #333333;*/
 	padding-bottom: 30px;
 }
 .product_right h1{
@@ -161,21 +161,6 @@
 	top: -10px;
 	left: 20px;
 }
-#pro_gift{
-	overflow: hidden;
-	margin-top: 10px;
-}
-#pro_gift p{
-	float: left;
-	line-height: 36px;
-}
-#pro_gift #gift_img{
-	float: left;
-	margin: 0 0 5px 20px;
-}
-#pro_gift #gift_img img{
-	width: 36px;
-}
 .pulldown_btn{
     line-height: 28px;
     padding: 0 34px 0 10px;
@@ -198,6 +183,19 @@
 }
 .pulldown_btn:hover i{
 	background-position-y: -20px;
+}
+#select_btn b{
+	position: absolute;
+	width: 67px;
+	height: 2px;
+	background: #fff;
+	bottom: -1px;
+	right: 0px;
+	z-index: 10;
+	display: none;
+}
+#select_btn:hover .gift_box, #select_btn:hover b{
+	display: block;
 }
 .pro_server{
 	overflow: hidden;
@@ -223,10 +221,10 @@
     position: relative;
     top: 3px;
 }
-.pro_select .pro_select_detail{
+.pro_select_detail{
 	zoom: 0;
 }
-.pro_select .pro_select_detail:after{
+.pro_select_detail:after{
 	content: "a";
 	height: 0;
 	clear: both;
@@ -234,42 +232,42 @@
 	overflow: hidden;
 	visibility: hidden;
 }
-.pro_select .pro_select_detail label{
+.pro_select_detail label{
 	float: left;
 	width: 75px;
 	height: 40px;
 	line-height: 40px;
 }
-.pro_select .pro_select_detail ul{
+.pro_select_detail ul{
 	float: left;
 	width: 620px;
 }
-.pro_select .pro_select_detail ul li{
+.pro_select_detail ul li{
 	float: left;
 	margin: 0 10px 10px 0;
 	border: 1px solid #a4a4a4;
     border-radius: 2px;
 }
-.pro_select .pro_select_detail ul li:hover{
+.pro_select_detail ul li:hover{
 	cursor: pointer;
 }
-.pro_select .pro_select_detail ul li div{
+.pro_select_detail ul li div{
 	width: 143px;
 	height: 38px;
 }
-.pro_select .pro_select_detail ul li div img{
+.pro_select_detail ul li div img{
 	width: 30px;
 	margin: 4px 0 0 4px;
 	float: left;
 }
-.pro_select .pro_select_detail ul li div span{
+.pro_select_detail ul li div span{
 	float: right;
 	width: 90px;
 	height: 38px;
 	text-align: center;
 	line-height: 38px;
 }
-.pro_select .pro_select_detail ul .detail_selected{
+.pro_select_detail ul .detail_selected{
 	border: 1px solid #ca141d;
 	font-weight: 700;
 }
@@ -291,13 +289,6 @@
     left: -1px;
     display: none;
 }
-.product_service b{
-	position: absolute;
-	width: 116px;
-	height: 2px;
-	background: #fff;
-	top: -1px;
-}
 #safe_btn .product_service ul{
 	width: 640px;
 }
@@ -309,6 +300,7 @@
 	float: left;
 	position: relative;
 	width: 80px;
+	padding: 0;
 }
 #safe_btn .product_service ul .i_title span{
 	margin-left: 25px;
@@ -363,6 +355,7 @@
     color: #777;
     font-weight: bold;
     font-style: normal;
+    cursor: pointer;
 }
 #pro_num_plus{
 	border-bottom: 1px solid #e2e2e2;
@@ -390,4 +383,203 @@
 	width: 100%;
 	background: #ddd;
 	height: 1px;
+}
+.detail_title{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.detail_title p{
+	text-align: center;
+}
+.detail_title p a{
+	margin: 0 25px;
+    font-size: 18px;
+    padding: 0 10px 6px 10px;
+    color: #a4a4a4;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    height: 100px;
+    line-height: 100px;
+}
+.detail_title p .title_selected{
+	color: #ca141d;
+    cursor: default;
+}
+.detail_title p a em{
+	width: 100%;
+    height: 2px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.detail_title p .title_selected em{
+	background: #ca141d;
+}
+.detail_img img{
+	width: 100%;
+    min-width: 1000px;
+}
+.detail_space{
+	width: 100%;
+	height: 60px;
+}
+.pro_detail_title{
+	width: 1200px;
+	margin: 0 auto;
+	font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 14px;
+    position: relative;
+    padding-left: 14px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+.pro_detail_title em{
+	width: 4px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    background: #ca141d;
+}
+.pro_detail_main{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.pro_detail_main h2{
+	float: left;
+	font-size: 22px;
+    font-weight: 600;
+    width: 100px;
+}
+.pro_detail_main ul{
+	float: left;
+	font-size: 14px;
+	margin-left: 30px;
+}
+.pro_detail_main ul li{
+	margin-bottom: 10px;
+	position: relative;
+	zoom: 0;
+}
+.pro_detail_main ul li:after{
+	overflow: hidden;
+	content: "a";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+.pro_detail_main ul li label{
+	float: left;
+	width: 128px;
+}
+.pro_detail_main ul li span{
+	float: left;
+	margin-left: 20px;
+	width: 850px;
+}
+.pro_detail_main ul li b{
+	width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: #d8d8d8;
+    position: absolute;
+    top: 8px;
+    left: -16px;
+}
+.pro_gray_box{
+	background: #F5F5F5;
+	margin-bottom: 60px;
+}
+.pro_gray_box p{
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.pro_gray_box p a{
+    color: #a4a4a4;
+}
+.pro_gray_box p em{
+	position: absolute;
+	width: 14px;
+	height: 7px;
+	background: url(../img/detail/icon50.png) no-repeat -3px -26px;
+	left: 50%;
+	margin-left: -7px;
+	top: -15px;
+}
+.pro_gray_main{
+	padding: 40px 0;
+	border-top: 1px solid #d8d8d8;
+}
+.no_border{
+	border: 0;
+}
+#pro_packing{
+	width: 1040px;
+	padding: 0 30px 40px 130px;
+	margin: 0 auto;
+}
+#pro_packing ul{
+	overflow: hidden;
+}
+#pro_packing ul li{
+	position: relative;
+	font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    color: #3a3a3a;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    width: 221px;
+}
+#pro_packing ul li i, .customer_service ul li i{
+	position: absolute;
+	width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: #d8d8d8;
+    left: 0px;
+    top: 6px;
+}
+.customer_service{
+	width: 1200px;
+	margin: 0 auto;
+	line-height: 26px;
+    font-size: 14px;
+    color: #3a3a3a!important;
+    margin-bottom: 60px;
+}
+.customer_service ul{
+	padding: 0 50px 53px 130px;
+}
+.customer_service ul li{
+	position: relative;
+	padding-left: 20px;
+}
+.customer_service ul li i{
+	top: 10px;
+}
+.pro_word p{
+	line-height: 21px;
+}
+.pro_word p em{
+	position: relative;
+	margin-right: 5px;
+	font-style: normal;
+	top: 3px;
+	font-size: 12px;
+}
+.moregoods_space{
+	height: 30px;
 }

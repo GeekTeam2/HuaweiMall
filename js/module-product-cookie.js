@@ -1,5 +1,7 @@
 define(function(){
 	var cart = function(){
+		joinCart();
+		
 		$("#cart_btn").click(function(color, capacity){
 			var goodsid = $(".product_right").find("h1").attr("id");
 			var color = $("#pro_sel_color").find(".detail_selected").attr("id");
@@ -39,53 +41,35 @@ define(function(){
 					$.cookie("goods", cookieStr, {expires: 7});
 				}
 			}
-			
-			alert($.cookie("goods"));
+			joinCart();
+//			alert($.cookie("goods"));
 			return false;
 		})
 	}
 	
-	var joinCart = function(){
+	function joinCart(){
 		if(!$.cookie("goods")){
 			$(".minicart-empty").css("display", "block");
 			$(".minicart-content").css("display", "none");
 		}else{
 			$(".minicart-empty").css("display", "none");
 			$(".minicart-content").css("display", "block");
-			$(".minicart-content").html();
+			
+			var cart_arr = eval($.cookie("goods"));
+			var goodshtml = '';
+			var num = 0;
+			for(var i = 0; i < cart_arr.length; i++){
+				goodshtml += '<div class = "cart_goods"><i><input type="checkbox" /></i><a href="#"><img src="../img/index/78_78_1497185568013mp.jpg" /></a><div class = "cart_goods_detail"><p class = "cart_title"><a href="#">荣耀8 4GB+64GB 全网通版</a></p><p class = "cart_color">流光金</p><p class = "cart_price"><span class = "cart_price_before">¥ 2099.00</span><span class = "cart_price_now">¥ 1899.00</span><span id = "cart_goods_count">x' + cart_arr[i].num + '</span></p></div></div>';
+				num += parseInt(cart_arr[i].num);
+			}
+			$("#minicart-head-total").html(num);
+			$(".cart_box").html(goodshtml);
+			
+			$("#sum_now").html('¥ ' + 1899 * num + '.00');
+			$("#sum_before").html('¥ ' + 2099 * num + '.00');
 		}
 	}
-	/*
-		<div class="minicart-content" id="cart-list">
-			<div class = "cart_goods">
-				<i><input type="checkbox" /></i>
-				<a href="#">
-					<img src="../img/index/78_78_1497185568013mp.jpg" />
-				</a>
-				<div class = "cart_goods_detail">
-					<p class = "cart_title"><a href="#">荣耀8 4GB+64GB 全网通版</a></p>
-					<p class = "cart_color">流光金</p>
-					<p class = "cart_price">
-						<span class = "cart_price_before">¥ 2099.00</span>
-						<span class = "cart_price_now">¥ 1899.00</span>
-						<span id = "cart_goods_count">x1</span>
-					</p>
-				</div>
-			</div>
-			<div class = "account">
-				<div class = "sum_price">
-					<p class = "sum_txt">总计：</p>
-					<p class = "sum">
-						<span id = "sum_now">￥1899.00</span>
-						<span id = "sum_before">￥2099.00</span>
-					</p>
-				</div>
-				<a id = "sum_count" href="#">结算</a>
-			</div>
-		</div>
-	*/
 	return{
-		cart: cart,
-		joinCart: joinCart
+		cart: cart
 	}
 })

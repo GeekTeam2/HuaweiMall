@@ -5,15 +5,7 @@
 		<title>Document</title>
 		<link rel="stylesheet" type="text/css" href="../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../css/product.css" />
-		<script>
-			$(function(){
-				$("#activity_list").parent().hover(function(){
-					$("#activity_list_details").css("display", "block");
-				}, function(){
-					$("#activity_list_details").css("display", "none");
-				})
-			})
-		</script>
+		<script type="text/javascript" src="../js/require.js" defer async="true" data-main="../js/main-product.js"></script>
 	</head>
 	<body>
 		<div class="shortcut-frame">
@@ -106,7 +98,34 @@
 											<p>您的购物车是空的，赶紧选购吧</p>
 											<a href="">去逛逛吧</a>
 										</div>
-										<div class="minicart-content hide" id="cart-list">
+										<div class="minicart-content" id="cart-list">
+											<div class = "cart_box">
+												<div class = "cart_goods">
+													<i><input type="checkbox" /></i>
+													<a href="#">
+														<img src="../img/index/78_78_1497185568013mp.jpg" />
+													</a>
+													<div class = "cart_goods_detail">
+														<p class = "cart_title"><a href="#">荣耀8 4GB+64GB 全网通版</a></p>
+														<p class = "cart_color">流光金</p>
+														<p class = "cart_price">
+															<span class = "cart_price_before">¥ 2099.00</span>
+															<span class = "cart_price_now">¥ 1899.00</span>
+															<span id = "cart_goods_count">x1</span>
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class = "account">
+												<div class = "sum_price">
+													<p class = "sum_txt">总计：</p>
+													<p class = "sum">
+														<span id = "sum_now">￥1899.00</span>
+														<span id = "sum_before">￥2099.00</span>
+													</p>
+												</div>
+												<a id = "sum_count" href="#">结算</a>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -582,20 +601,19 @@
 						<a href="#" id = "product_gallery_back"></a>
 						<div class = "product_gallery_box">
 							<ul id = "pro_gallerys">
-								<li><img class = "gall_now" src="../img/detail/gallery_gold2_1.jpg" /></li>
-								<li><img src="../img/detail/gallery_gold2_2.jpg" /></li>
-								<li><img src="../img/detail/gallery_gold2_3.jpg" /></li>
-								<li><img src="../img/detail/gallery_gold2_4.jpg" /></li>
-								<li><img src="../img/detail/gallery_gold2_5.jpg" /></li>
-								<li><img src="../img/detail/gallery_gold2_6.jpg" /></li>
-								<li><img src="../img/detail/gallery_gold2_7.jpg" /></li>
+								<li class = "gall_now"><img src="../img/detail/img_big_1.jpg" /></li>
+								<li><img src="../img/detail/img_big_2.jpg" /></li>
+								<li><img src="../img/detail/img_big_3.jpg" /></li>
+								<li><img src="../img/detail/img_big_4.jpg" /></li>
+								<li><img src="../img/detail/img_big_5.jpg" /></li>
+								<li><img src="../img/detail/img_big_6.jpg" /></li>
 							</ul>
 						</div>
 						<a href="#" id = "product_gallery_next"></a>
 					</div>
 				</div>
 				<div class = "product_right">
-					<h1 id = "pro_title">华为畅享7 3GB+32GB 全网通高配版（流光金）</h1>
+					<h1 id = "goods1">华为畅享7 3GB+32GB 全网通高配版（流光金）</h1>
 					<div id = "pro_desc">【预售】付款后预计10月19日开始发货，购机即送自拍杆，数量有限，赠完为止。</div>
 					<div class = "pro_info">
 						<label id = "pro_price_label">抢购价</label>
@@ -615,13 +633,6 @@
 							</ul>
 						</div>
 					</div>
-					<div id = "pro_gift">
-						<p>配</p>
-						<a href="#" id = "gift_img">
-							<img src="../img/detail/gift1.jpg" />
-						</a>
-						<span class = "pulldown_btn" id = "select_btn"><span>选择</span><i></i></span>
-					</div>
 					<div class = "pro_server">
 						<label>服务说明</label>
 						<p>已满48元已免运费<span></span>由华为商城负责发货，并提供售后服务</p>
@@ -629,41 +640,41 @@
 					<div class = "pro_select">
 						<div class = "pro_select_detail" id = "pro_sel_color">
 							<label>选择颜色</label>
-							<ul>
-								<li class = "detail_selected">
+							<ul id = "color_ul">
+								<li class = "detail_selected" id = "white">
 									<div>
 										<img src="../img/detail/color_black.jpg" />
 										<span>珠光白</span>
 									</div>
 								</li>
-								<li>
+								<li id = "gold1">
 									<div>
 										<img src="../img/detail/color_black.jpg" />
-										<span>珠光白</span>
+										<span>流光金</span>
 									</div>
 								</li>
-								<li>
+								<li id = "black">
 									<div>
 										<img src="../img/detail/color_black.jpg" />
-										<span>珠光白</span>
+										<span>黑色</span>
 									</div>
 								</li>
-								<li>
+								<li id = "pink">
 									<div>
 										<img src="../img/detail/color_black.jpg" />
-										<span>珠光白</span>
+										<span>粉色</span>
 									</div>
 								</li>
-								<li>
+								<li id = "red">
 									<div>
 										<img src="../img/detail/color_black.jpg" />
-										<span>珠光白</span>
+										<span>红色</span>
 									</div>
 								</li>
-								<li>
+								<li id = "gold">
 									<div>
 										<img src="../img/detail/color_black.jpg" />
-										<span>珠光白</span>
+										<span>香槟金</span>
 									</div>
 								</li>
 							</ul>
@@ -678,30 +689,37 @@
 						</div>
 						<div class = "pro_select_detail normal" id = "pro_capacity">
 							<label>选择容量</label>
-							<ul>
-								<li class = "detail_selected">
+							<ul id = "capacity_ul">
+								<li class = "detail_selected" id = "capacity01">
 									<div><span>4GB+64GB</span></div>
 								</li>
-								<li>
+								<li id = "capacity02">
 									<div><span>4GB+32GB</span></div>
+								</li>
+							</ul>
+						</div>
+						<div class = "pro_select_detail normal" id = "pro_combo">
+							<label>选择套餐</label>
+							<ul>
+								<li class = "detail_selected">
+									<div><span>官方标配</span></div>
 								</li>
 							</ul>
 						</div>
 						<div class = "pro_select_detail">
 							<label>保障服务</label>
 							<div class = "pulldown_btn" id = "safe_btn">
-								<span>可选保障服务</span>
+								<span id = "safemain">可选保障服务</span>
 								<i></i>
 								<div class = "product_service">
-									<b></b>
-									<ul>
+									<ul id = "safe_extend">
 										<span class = "i_title"><i></i><span>延保：</span></span>
 										<li class = "service_select">无需延保</li>
 										<li>延长服务宝（一年期）¥158.00</li>
 										<li>延长服务宝（半年期）¥88.00</li>
 									</ul>
-									<ul>
-										<span class = "i_title"><i></i><span>碎屏保：</span></span>
+									<ul id = "safe_broken">
+										<li class = "i_title"><i></i><span>碎屏保：</span></li>
 										<li class = "service_select">无需碎屏保</li>
 										<li>碎屏服务宝（一年期）¥129.00</li>
 									</ul>
@@ -710,11 +728,11 @@
 						</div>
 						<div class = "pro_select_detail">
 							<label>已选择商品:</label>
-							<p id = "selected_goods">魅海蓝 / 全网通版 / 4GB+64GB / 官方标配</p>
+							<p id = "selected_goods"><span id = "sel_color">魅海蓝</span> / <span id = "sel_pro">全网通版</span> / <span id = "sel_capacity">4GB+64GB</span> / <span id = "sel_combo">官方标配</span></p>
 						</div>
 						<div class = "product_operation">
 							<div class = "product_num">
-								<input type="text" id = "pro_num" placeholder="1" value="1" />
+								<input type="text" id = "pro_num" value="1" />
 								<p class = "product_num_btn">
 									<i id="pro_num_plus">+</i>
 									<i id="pro_num_minus">-</i>
@@ -727,6 +745,452 @@
 				</div>
 			</div>
 			<div class = "hr"></div>
+			<div class = "detail_title">
+				<p>
+					<a href="#" class="title_selected">商品详情<em></em></a>
+					<a href="#">规格参数<em></em></a>
+					<a href="#">包装与售后<em></em></a>
+					<a href="#">用户评价（1000）<em></em></a>
+				</p>
+			</div>
+			<div class = "detail_img">
+				<img src="../img/detail/detail01.jpg" />
+				<img src="../img/detail/detail02.jpg" />
+				<img src="../img/detail/detail03.jpg" />
+				<img src="../img/detail/detail04.jpg" />
+				<img src="../img/detail/detail05.jpg" />
+				<img src="../img/detail/detail06.jpg" />
+				<img src="../img/detail/detail07.jpg" />
+				<img src="../img/detail/detail08.jpg" />
+				<img src="../img/detail/detail09.jpg" />
+				<img src="../img/detail/detail10.jpg" />
+			</div>
+			<div class = "detail_space"></div>
+			<div class = "detail_box">
+				<h3 id = "pro_para_title" class = "pro_detail_title"><em></em>规格参数</h3>
+				<div class = "pro_detail_main">
+					<h2>主要参数</h2>
+					<ul>
+						<li>
+							<b></b>
+							<label>上市时间</label>
+							<span>2017年7月</span>
+						</li>
+						<li>
+							<b></b>
+							<label>上市时间</label>
+							<span>2017年7月</span>
+						</li>
+						<li>
+							<b></b>
+							<label>上市时间</label>
+							<span>2017年7月</span>
+						</li>
+						<li>
+							<b></b>
+							<label>上市时间</label>
+							<span>2017年7月</span>
+						</li>
+						<li>
+							<b></b>
+							<label>上市时间</label>
+							<span>2017年7月</span>
+						</li>
+						<li>
+							<b></b>
+							<label>屏幕色彩</label>
+							<span>1600万色，色彩饱和度(NTSC)：NTSC>65%</span>
+						</li>
+						<li>
+							<b></b>
+							<label>屏幕色彩</label>
+							<span>1600万色，色彩饱和度(NTSC)：NTSC>65%</span>
+						</li>
+						<li>
+							<b></b>
+							<label>屏幕色彩</label>
+							<span>1600万色，色彩饱和度(NTSC)：NTSC>65%</span>
+						</li>
+						<li>
+							<b></b>
+							<label>机身内存</label>
+							<span>（ROM）16GB（标配）(备注：可使用的内存容量小于此值，因为手机软件占用的空间)</span>
+						</li>
+						<li>
+							<b></b>
+							<label>机身内存</label>
+							<span>（ROM）16GB（标配）(备注：可使用的内存容量小于此值，因为手机软件占用的空间)</span>
+						</li>
+						<li>
+							<b></b>
+							<label>机身内存</label>
+							<span>（ROM）16GB（标配）(备注：可使用的内存容量小于此值，因为手机软件占用的空间)</span>
+						</li>
+						<li>
+							<b></b>
+							<label>主摄像头</label>
+							<span>1300万像素</span>
+						</li>
+						<li>
+							<b></b>
+							<label>主摄像头</label>
+							<span>1300万像素</span>
+						</li>
+					</ul>
+				</div>
+				<div class = "pro_gray_box">
+					<div class = "pro_detail_main pro_gray_main no_border">
+						<h2>主体</h2>
+						<ul>
+							<li>
+								<label>上市时间</label>
+								<span>2017年7月</span>
+							</li>
+							<li>
+								<label>上市时间</label>
+								<span>2017年7月</span>
+							</li>
+							<li>
+								<label>上市时间</label>
+								<span>2017年7月</span>
+							</li>
+							<li>
+								<label>上市时间</label>
+								<span>2017年7月</span>
+							</li>
+							<li>
+								<label>上市时间</label>
+								<span>2017年7月</span>
+							</li>
+							<li>
+								<label>屏幕色彩</label>
+								<span>1600万色，色彩饱和度(NTSC)：NTSC>65%</span>
+							</li>
+							<li>
+								<label>屏幕色彩</label>
+								<span>1600万色，色彩饱和度(NTSC)：NTSC>65%</span>
+							</li>
+							<li>
+								<label>屏幕色彩</label>
+								<span>1600万色，色彩饱和度(NTSC)：NTSC>65%</span>
+							</li>
+							<li>
+								<label>机身内存</label>
+								<span>（ROM）16GB（标配）(备注：可使用的内存容量小于此值，因为手机软件占用的空间)</span>
+							</li>
+							<li>
+								<label>机身内存</label>
+								<span>（ROM）16GB（标配）(备注：可使用的内存容量小于此值，因为手机软件占用的空间)</span>
+							</li>
+							<li>
+								<label>机身内存</label>
+								<span>（ROM）16GB（标配）(备注：可使用的内存容量小于此值，因为手机软件占用的空间)</span>
+							</li>
+							<li>
+								<label>主摄像头</label>
+								<span>1300万像素</span>
+							</li>
+							<li>
+								<label>主摄像头</label>
+								<span>1300万像素</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>网络</h2>
+						<ul>
+							<li>
+								<label>网络制式</label>
+								<span>支持中国移动的4G/3G/2G、中国联通的4G/3G/2G、中国电信的4G/3G/2G（如果两张都是电信卡，只有一张电信卡可以使用；卡槽1、2可任意切换为主卡、副卡。）</span>
+							</li>
+							<li>
+								<label>浏览器</label>
+								<span>华为 EMUI5.1 浏览器</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>屏幕</h2>
+						<ul>
+							<li>
+								<label>屏幕尺寸</label>
+								<span>5.0英寸</span>
+							</li>
+							<li>
+								<label>屏幕尺寸</label>
+								<span>5.0英寸</span>
+							</li>
+							<li>
+								<label>屏幕尺寸</label>
+								<span>5.0英寸</span>
+							</li>
+							<li>
+								<label>屏幕尺寸</label>
+								<span>5.0英寸</span>
+							</li>
+							<li>
+								<label>屏幕尺寸</label>
+								<span>5.0英寸</span>
+							</li>
+							<li>
+								<label>屏幕尺寸</label>
+								<span>5.0英寸</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>传感器</h2>
+						<ul>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>存储</h2>
+						<ul>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>娱乐功能</h2>
+						<ul>
+							<li>
+								<label>FM收音机</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>拍摄功能</h2>
+						<ul>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>拍摄模式</label>
+								<span>支持专业模式、美肤、全景后置、全景自拍、HDR、有声照片、熄屏快拍、笑脸抓拍、声控拍照、定时拍照、触摸拍照、延时摄影、慢动作、前置补光。</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>传输功能</h2>
+						<ul>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>拍摄模式</label>
+								<span>支持专业模式、美肤、全景后置、全景自拍.</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>个人助理</h2>
+						<ul>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>拍摄模式</label>
+								<span>支持专业模式、美肤、全景后置、全景自拍.</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>其他</h2>
+						<ul>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>拍摄模式</label>
+								<span>支持专业模式、美肤、全景后置、全景自拍.</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+							<li>
+								<label>重力感应器支持</label>
+								<span>支持</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "pro_detail_main pro_gray_main">
+						<h2>商品编码</h2>
+						<ul>
+							<li>
+								1001010044106
+							</li>
+						</ul>
+					</div>
+					<p><em></em><a href="#">收起参数详情</a></p>
+				</div>
+				<h3 id = "pro_para_title" class = "pro_detail_title"><em></em>包装</h3>
+				<div id = "pro_packing">
+					<ul>
+						<li><i></i>手机（带电池）X 1</li>
+						<li><i></i>充电器X 1</li>
+						<li><i></i>USB线X 1</li>
+						<li><i></i>手机（带电池）X 1</li>
+						<li><i></i>充电器X 1</li>
+						<li><i></i>USB线X 1</li>
+						<li><i></i>TP保护膜（出厂已贴）X 1</li>
+					</ul>
+				</div>
+				<h3 id = "pro_para_title" class = "pro_detail_title"><em></em>售后服务</h3>
+				<div class = "customer_service">
+					<ul>
+						<li><i></i>本产品全国联保，享受三包服务，质保期为：一年质保</li>
+						<li><i></i>如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7天内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</li>
+						<li><i></i>售后服务电话：400-830-8300</li>
+						<li><i></i>华为消费者BG官网：<a href="#"> https://consumer.huawei.com/cn/</a></li>
+					</ul>
+					<div class = "pro_word">
+						<p><em>*</em>以上页面中的产品图片及屏幕内容仅作示意，实物产品效果（包括但不限于外观、颜色、尺寸）和屏幕显示内容（包括但不限于背景、UI、配图）可能略有差异，请以实物为准。</p>
+						<p><em>*</em>以上页面中的数据为理论值，均来自华为内部实验室，于特定测试环境下所得（请见各项具体说明），实际使用中可能因产品个体差异、软件版本、使用条件和环境因素不同略有不同，请以实际使用的情况为准。</p>
+						<p><em>*</em>为提供尽可能准确的产品信息、规格参数、产品特性，华为或荣耀可能实时调整和修订以上页面中的文字表述、图片效果等内容，以求与实际产品性能、规格、指数、零部件等信息相匹配，由于产品批次和生产供应因素实时变化，如遇确有进行上述修改和调整必要的情形，恕不专门通知。</p>
+					</div>
+				</div>
+			</div>
+			<div class = "moregoods_space"></div>
 		</div>
 
 		<div class="slogan-frame">
@@ -986,5 +1450,4 @@
 			</div>
 		</div>		
 	</body>
-	<script type="text/javascript" src="../js/require.js" defer async="true" data-main="../js/main-detail.js"></script>
 </html>

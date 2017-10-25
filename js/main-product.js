@@ -24,5 +24,4 @@ require(["jquery","product"],function($, product){
 
 require(["jquery","cookie","goodsCookie"],function($, cookie, goodsCookie){
 	goodsCookie.cart();
-	goodsCookie.joinCart();
 })
