@@ -13,10 +13,10 @@ define(function(){
       loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=qualityDescShowInfo");
 
       loadmain($("#hotsellpart").find(".part-content"),"../servlet/ProductServlet?method=hotPartsShowInfo");
-      loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=qualityShowInfo");
+      loadpart($("#hotsellpart").find(".scroll-box"), "../servlet/ProductServlet?method=qualityShowInfo");
 
       loadmain($("#brandpart").find(".part-content"),"../servlet/ProductServlet?method=brandShowInfo");
-      loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=qualityDescShowInfo");
+      loadpart($("#brandpart").find(".scroll-box"), "../servlet/ProductServlet?method=qualityDescShowInfo");
 
       loadmain($(".hotsell"),"../servlet/ProductServlet?method=showInfo");
       loadpart($(".recommend"),"../servlet/ProductServlet?method=qualityShowInfo");
@@ -40,7 +40,7 @@ define(function(){
                   }
                })
 
-               node.find(".grid-items").eq(0).find("img").attr("src", "../" + data[count + 1].image);
+               node.find(".grid-items").eq(0).find("img").removeClass().attr("src", "../" + data[count + 1].image);
             }
          });
       }
