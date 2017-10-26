@@ -16,10 +16,10 @@ define(function(){
       loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=qualityShowInfo");
 
       loadmain($("#brandpart").find(".part-content"),"../servlet/ProductServlet?method=brandShowInfo");
-      loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=mobileShowInfo");
+      loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=qualityDescShowInfo");
 
       loadmain($(".hotsell"),"../servlet/ProductServlet?method=showInfo");
-      loadpart($(".recommend"),"../servlet/ProductServlet?method= qualityShowInfo");
+      loadpart($(".recommend"),"../servlet/ProductServlet?method=qualityShowInfo");
       
       function loadmain(node,url){
          $.ajax({
@@ -58,7 +58,7 @@ define(function(){
                   $(this).find(".grid-title").html(data[count].name);
                   $(this).find(".grid-desc").html(data[count].desca);
                   $(this).find(".grid-price").html(data[count].price);
-                  $(this).find(".grid-tips").find("i").addClass(data[count].tag);
+                  $(this).find(".grid-tips").find("i").removeClass().addClass(data[count].tag);
                   count++;
                })
             }
