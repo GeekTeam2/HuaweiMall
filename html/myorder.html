@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link href = "../css/myorder.css" type = "text/css" rel = "stylesheet"/>
+	</head>
+	<body>
+		<!-- 网页头部的代码 -->
+
+		<!-- 订单页正文部分 -->
+		<div class = "myorder-hr"></div>
+		<div class="g">
+		<!--面包屑 -->
+			<div class="breadcrumb-area">
+				<a href="#">首页</a>
+				&nbsp;>&nbsp;
+				<em id="personCenter">
+					<a href="#">我的商城</a>
+				</em>
+				<em id="pathPoint">&nbsp;>&nbsp;</em>
+				<span id="pathTitle">我的订单</span>
+			</div>	
+		</div>
+		<div class = "myorder-hr"></div>
+		<div class="g">
+			<div class = "fl">
+				<div class = "mc-menu-area">
+					<div class="h">
+						<a href="#"><span>我的商城</span></a>
+					</div>
+					<div class="b">
+				        <ul>
+				            <li>
+				                <h3 class="icon-mc-mail"><a href="#"><span id="li-msg">站内信<em></em></span></a></h3>
+				            </li>
+				            <li>
+				                <h3 class="icon-mc-help"><a href="#" target="_blank"><span>帮助中心</span></a></h3>
+				            </li>
+				        	<li>
+				                <h3 class="icon-mc-order"><span>订单中心</span></h3>
+				            	<ol>
+				                	<li id="li-order" class="current"><a href="#"><span>我的订单<em></em></span></a></li>
+				                    <li id="li-exchange"><a href="#"><span>我的退换货</span></a></li>
+									<li id="li-recover"><a href="#"><span>我的回收单</span></a></li>
+				                    <li id="li-prdRemark"><a href="#"><span>商品评价</span></a></li>
+				                </ol>
+				            </li>
+				            <li>
+				                <h3 class="icon-mc-asset"><span>我的资产</span></h3>
+				                <ol>
+				                    <li id="li-newpoint"><a href="#"><span>我的积分</span></a></li>
+				                    <li id="li-coupon"><a href="#"><span>我的优惠券</span></a></li>
+				                    <li id="li-balance"><a href="#"><span>我的代金券</span></a></li>
+				                    <li id="li-petal"><a href="#"><span>我的花瓣</span></a></li>
+				                    <li id="li-point"><a href="#"><span>等级与特权</span></a></li>
+				                </ol>
+				            </li>
+				            <li>
+				                <h3 class="icon-mc-support"><span>购买支持</span></h3>
+				            	<ol>
+				                    <li id="li-myAddress"><a href="#"><span>收货地址管理</span></a></li>
+				                    <li id="li-authentication"><a href="#"><span>实名认证</span></a></li>
+				                    <li id="li-zhima"><a href="#"><span>芝麻信用</span></a></li>
+									<li id="li-myAppointment"><a href="#"><span>我的预约</span></a></li>
+				                    <li id="li-notification"><a href="#"><span>到货通知</span></a></li>
+				                    <li id="li-enterprise" class="hide"></li><!-- 优惠内购 -->
+				                </ol>
+				            </li>
+				        </ul>
+				    </div>
+
+				</div>
+			</div>
+			<div class = "fr">
+				<!-- 20141212-栏目-start -->
+				<div class="section-header">
+				    <div class="sfl">
+				        <h2><span>我的订单</span></h2>
+				    </div>
+				    <div class="sfr" id ="section-right">
+				    	<div class="ec-tab" id="sec-tab">
+				    		<ul>
+				    			<li class="current">
+				    				<a href="#"><span>最近六月内订单<em id="count-seltime-0">1</em></span>
+				    				</a>
+				    			</li>
+				    			<li>
+				    				<a href="#" ><span>六个月前订单<em id="count-seltime-1" style="display: none;">0</em></span></a>
+				    			</li>
+				    		</ul>
+				    		<div class="ec-tab-arrow" style="width: 136px; left: 0px; overflow: hidden;"></div>
+				    	</div>
+				    </div>
+			    </div>
+			    <!-- 20141222-我的订单-订单类别-start -->
+			    <div class = "myorder-cate" id ="myorder-cate">
+			    	<ul>
+			    		<li class = "current">
+			    			<a href="#"><span>全部有效订单<em></em></span></a>
+			    		</li>
+			    		<li>
+			    			<a href="#"><span>待支付<em id="count-seltime-2" data-num="1">1</em></span></a>
+			    		</li>
+			    		<li><a href="#"><span>待评价<em id="nocommentNum" data-his="0" style="display: none;">0</em></span></a>
+			    		</li>
+			    		<li><a href="#"><span>待收货<em id="count-seltime-3" style="display: none;">0</em></span></a>
+			    		</li>
+			    		<li><a href="#"><span>已完成</span></a></li>
+			    		<li><a href="#"><span>已取消</span></a></li>
+			    	</ul>
+			    </div>
+			    <!-- 20141222-我的订单-列表-start -->
+			    <div id = "myorder-record" class = "myorder-list-content">
+					<!-- 20141222-我的订单-列表-订单合并-end -->
+						<div class="list-group-title">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<thead>
+									<tr>
+										<th class="col-pro">商品</th>
+										<th class="col-price">单价/元</th>
+										<th class="col-quty">数量</th>
+										<th class="col-pay">实付款/元</th>
+										<th class="col-operate">订单状态及操作</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+			    </div>
+			    <!-- 商品实质内容 -->
+			    <div id = "list-group" class = "list-group">
+			    	<div class="o-info">
+						<div class="col-info">
+						<input type="checkbox" class="checkbox" name="payCheck" value="11083036719" paymentstatus="2">
+							<span class="o-date">2017-10-24 10:58</span>
+							<span class="o-no">订单号：
+								<a href="#" title="11083036719">11083036719</a>
+							</span>
+							<!--
+		                    	ie6下鼠标悬停追加ClassName： hover
+		                    	示例：[ o-logistics hover ] 
+		                    -->
+						</div>
+						<div class="col-state">
+							订单已确认&nbsp;|&nbsp;		
+							待支付
+						</div>
+					</div>
+					<div class ="o-pro">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td class = "col-pro-img">
+										<p class= "p-img">
+											<a href="#" target="_blank">
+												<img alt="荣耀V9 全网通高配版 6GB+64GB（铂光金）" src="../img/myorder/100_100_1506588500952mp.jpg">
+											</a>
+										</p>
+									</td>
+									<td class="col-pro-info">
+										<p class="p-name">
+											<a target="_blank" href="#">荣耀V9 全网通高配版 6GB+64GB（铂光金）</a>
+										</p>
+									</td>
+									<td class="col-price">
+	        							<em>¥</em>
+	        							<span>2899.00</span>
+		        					</td>
+		        					<td class="col-quty">1</td>
+		        					<td rowspan="3" class="col-pay">
+        								<p>
+	        								<em>¥</em>
+											<span>0.00</span>			        								
+				        				</p>
+        							</td>
+        							<td rowspan="3" class="col-operate">
+										<p class="p-button">
+											<a class="button-operate-pay" href="#" target="_blank">
+												<span>立即支付</span>
+											</a>
+										</p>
+										<p class="p-link"><a href="#">修改订单</a></p>
+										<p class="p-link"><a href="#" data-ordercode="11083036719">取消订单</a></p>
+										<p class="p-link"><a href="#">订单详情</a></p>
+									</td>
+								</tr>
+								<tr>
+		        					<td class="col-pro-img">
+		    							<p class="p-img">
+		    								<a href="#" target="_blank">
+                                                <img alt="天际通 7天全球上网流量" src="../img/myorder/100_100_1497323522072mp.jpg">
+                                            </a>
+		    							</p>
+		    							<s class="p-tag">
+		    								<i class="tag-accessory"></i>
+		    							</s>
+		        					</td>
+		        					<td class="col-pro-info">
+										<p class="p-name">
+											<a href="#" target="_blank">天际通 7天全球上网流量</a>
+										</p>
+		        					</td>
+		        					<td class="col-price">--</td>
+		        					<td class="col-quty">1</td>
+		        				</tr>
+		        				<tr>
+		        					<td class="col-pro-img">
+		    							<p class="p-img">
+		    								<a title="荣耀V9 保护壳" href="#" target="_blank">
+                                                <img alt="荣耀V9 保护壳" src="../img/myorder/100_100_1488185057066mp.jpg">
+                                            </a>
+		    							</p>
+		    							<s class="p-tag">
+		    								<i class="tag-accessory"></i>
+		    							</s>
+		        					</td>
+		        					<td class="col-pro-info">
+										<p class="p-name">
+											<a href="#" target="_blank">荣耀V9 保护壳</a>
+										</p>
+		        					</td>
+		        					<td class="col-price">--</td>
+		        					<td class="col-quty">1</td>
+		        				</tr>
+							</tbody>
+						</table>
+					</div>
+			    </div>
+			    <!-- 订单合并-start -->
+			    <div class="myOrder-control " id="myOrder-control-bottom">
+					<label class="inputbox" id="bottomCheckBoxDiv" name="bottomCheckBoxDiv">
+						<!-- 20140819-我的订单-合并付款-start -->
+							<input type="checkbox" class="checkbox" id="bottomCheckAllBox"><span>全选</span>
+						<!-- 20140819-我的订单-合并付款-end -->
+					</label>
+					<a href="#" class="button-operate-merge-pay" id="bottomButton"><span>合并支付</span></a>
+				</div>
+			</div> 
+		</div>
+
+
+	</body>
+	<script type = "text/javascript" src = "../js/require.js" defer async = "true" data-main = "../js/main-myorder.js"></script>
+</html>
