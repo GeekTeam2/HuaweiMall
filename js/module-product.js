@@ -73,7 +73,6 @@ define(function(){
 			$(this).attr("class", "service_select");
 			var start1 = $(this).html().indexOf("¥", 0);
 			html = $(this).html().substring(0, start1);
-//			if
 			$("#safemain").html(html);
 		});
 		
@@ -108,12 +107,26 @@ define(function(){
 		})
 	}
 	
+	var openAndClose = function(str, oBtn1, oBtn2, box, iTarget){
+		oBtn1.click(function(){
+			box.css("height", iTarget);
+			oBtn1.css("display", "none");
+			oBtn2.css("display", "block");
+			if(str == "close"){
+				oBtn2.parent().find(".cover_box").css("display", "block");
+			}else if(str == "open"){
+				oBtn1.parent().find(".cover_box").css("display", "none");
+			}
+		})
+	}
+	
 	return{
 		showActivity: showActivity,
 		changeGallery: changeGallery,
 		movePage: movePage,
 		selectGoods: selectGoods,
 		safe: safe,
-		cartCount: cartCount
+		cartCount: cartCount,
+		openAndClose: openAndClose
 	}
 })
