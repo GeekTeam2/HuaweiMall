@@ -19,14 +19,14 @@ define(['jquery','cookie'], function($){
     	  $("#unlogin-status").css("display","block");
           $("#login-status").css("display","none");
           $.cookie("login-status","");
-//          $.ajax({
-//        	  url:"",
-//        	  type:"POST",
-//        	  data:"logout",
-//        	  success:function(res){
-//        		  alert(1);
-//        	  }
-//          })
+            $.ajax({
+          	  url:"",
+          	  type:"POST",
+          	  data:"logout",
+          	  success:function(res){
+          		  alert(1);
+          	  }
+            })
       })
 
    }   
