@@ -8,7 +8,8 @@ require.config({
 		"goodsCookie": "module-product-cookie",
 		"bigger": "module-bigger",
 		"backToTop": "module-backToTop",
-		"loginStatus": "module-loginStatus"
+		"loginStatus": "module-loginStatus",
+		"loginProduct": "module-loginProduct"
 	}
 })
 
@@ -43,4 +44,8 @@ require(["jquery","bigger"],function($, bigger){
 
 require(["jquery", "cookie", "loginStatus"],function($, cookie, loginStatus){
 	loginStatus.isLogin();
+})
+
+require(["jquery","cookie","loginProduct"],function($, cookie, loginProduct){
+	loginProduct.getProductInfo();
 })

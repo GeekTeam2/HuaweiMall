@@ -20,7 +20,7 @@ define(['jquery','cookie'], function($){
           $("#login-status").css("display","none");
           $.cookie("login-status","");
             $.ajax({
-          	  url:"",
+          	  url:"../servlet/UserServlet?method=loginOut",
           	  type:"POST",
           	  data:"logout",
           	  success:function(res){
