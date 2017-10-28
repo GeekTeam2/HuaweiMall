@@ -9,6 +9,7 @@ define(function(){
       loadmain($("#laptop"),"../servlet/ProductServlet?method=computerShowInfo");
       loadmain($("#pad"),"../servlet/ProductServlet?method=padShowInfo");
       loadmain($("#watch"),"../servlet/ProductServlet?method=wearShowInfo");
+      
       loadmain($("#smartHome").find(".part-content"),"../servlet/ProductServlet?method=homeShowInfo");
       loadpart($("#smartHome").find(".scroll-box"), "../servlet/ProductServlet?method=qualityDescShowInfo");
 
@@ -27,20 +28,20 @@ define(function(){
             data: {sort:"hotsell"},
             url: url,
             success: function (response) {
-               var count = 0;
-               var data = JSON.parse(response);
-               node.find(".grid-items").each(function(index, element){
+              var count = 0;
+              var data = JSON.parse(response);
+              node.find(".grid-items").each(function(index, element){
                   if(index >= 1){
-                     $(this).find(".grid-img").find("img").attr("src", "../" + data[count].image);
+                    $(this).find(".grid-img").find("img").attr("src", "../" + data[count].image);
                      $(this).find(".grid-title").html(data[count].name);
                      $(this).find(".grid-desc").html(data[count].desca);
                      $(this).find(".grid-price").html(data[count].price);
-                     $(this).find(".grid-tips").find("i").addClass(data[count].tag);
-                     count++;
+                     $(this).find(".grid-tips").find("i").removeClass().addClass(data[count].tag);
+                    count++;
                   }
                })
 
-               node.find(".grid-items").eq(0).find("img").removeClass().attr("src", "../" + data[count + 1].image);
+				node.find(".grid-items").eq(0).find("img").attr("src", "../" + data[count].image);
             }
          });
       }
@@ -64,7 +65,6 @@ define(function(){
             }
          });
       }
-      ///servlet/ProductServlet?method=mobileShowInfo  手机
       
    }
 
