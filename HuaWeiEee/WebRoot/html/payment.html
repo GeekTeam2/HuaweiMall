@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/payment.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="warp clearfix" style="min-height: 673px;">
+				<div class="contentArea clearfix">
+					<div class="logo clearfix">
+						<div class="logo_name clearfix">
+							<a href="#" class="huawei_logo">
+								<img src="../img/shopCart/Vmall_red.png" alt="huawei"/>
+							</a>
+							<span>收银台</span>
+						</div>
+					</div>
+					<div class="cashier_order_area clearfix" id="cashierHome">
+						<div class="cashier_orderInfo clearfix">
+							<div class="orderInfo_img pull-left">
+								<img src="../img/shopCart/success_icon.png"/>
+							</div>
+							<div class="orderInfo_words pull-left">
+								<div class="orderInfo_words_01 clearfix">
+									<div class="orderWords01 clearfix">
+										<h4 class="pull-left">订单提交成功，只差付款了~</h4>
+										<div class="orderNum pull-left">
+											<span>订单号：</span>
+											<span style="color: #da3232;">11103032826</span>
+										</div>
+										<div class="payNum pull-right">
+											<span class="payNumAll pull-right">¥2198.00</span>
+											<span class="payTitle pull-right">订单金额：</span>
+										</div>
+									</div>
+									<h5 class="clearfix">
+										请您在
+										<em class="dateDiff">22小时48分37秒</em>
+										内完成支付，否则订单将自动取消。
+										<div class="orderInfo_show pull-right">
+											订单详情
+											<img src="../img/shopCart/down arrow_icon.png"/ class="pull-right">
+										</div>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<ul class="nav nav-tabs" id="payTab">
+							<li class="COMMON active" name="common_pay">
+								<a href="#">常用</a>
+							</li>
+							<li class="THIP" name="third_pay">
+								<a href="#">平台支付</a>
+							</li>
+							<li class="INST" name="hb_pay">
+								<a href="#">分期支付</a>
+							</li>
+							<li class="NETB" name="nwchain_pay">
+								<a href="#">网银支付</a>
+							</li>
+							<li class="EXPR" name="shortcut_pay">
+								<a href="#">
+									快捷支付
+									<i>无需开通网银</i>
+									<img src="../img/shopCart/icon_bg.png"/>
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<!--常用-->
+							<ul class="tab-pane fade" id="common_pay">
+								<li class="select" >
+									<div class="act-line">
+										<i class="recomType">推荐</i>
+									</div>
+									<div class="pay_typeIco tooltip-test clearfix" title="支付宝">
+										<img src="../img/shopCart/ALIPAY.png" alt="支付宝"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="微信">
+										<img src="../img/shopCart/WXPAY.png" alt="微信"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="财富通">
+										<img src="../img/shopCart/TENPAY.png" alt="财富通"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="花呗">
+										<img src="../img/shopCart/HUABEI.png" alt="花呗"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+							</ul>
+							<!--平台支付-->
+							<ul class="tab-pane fade active in" id="third_pay">
+								<li class="select" >
+									<div class="act-line">
+										<i class="recomType">推荐</i>
+									</div>
+									<div class="pay_typeIco tooltip-test clearfix" title="支付宝">
+										<img src="../img/shopCart/ALIPAY.png" alt="支付宝"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="微信">
+										<img src="../img/shopCart/WXPAY.png" alt="微信"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="财付通">
+										<img src="../img/shopCart/TENPAY.png" alt="财付通"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								
+							</ul>
+							<!--分期支付-->
+							<ul class="tab-pane fade" id="hb_pay">
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="支付宝">
+										<img src="../img/shopCart/HUABEI.png" alt="支付宝"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+							</ul>
+							<!--网银支付-->
+							<ul class="tab-pane fade " id="nwchain_pay">
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="招商银行">
+										<img src="../img/shopCart/CMB.png" alt="招商银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国工商银行">
+										<img src="../img/shopCart/ICBC.png" alt="中国工商银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国建设银行">
+										<img src="../img/shopCart/CCB.png" alt="中国建设银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="交通银行">
+										<img src="../img/shopCart/BCM.png" alt="交通银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li><li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国农业银行">
+										<img src="../img/shopCart/ABC.png" alt="中国农业银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中信银行">
+										<img src="../img/shopCart/CITIC.png" alt="中信银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="浦发银行">
+										<img src="../img/shopCart/SPDB.png" alt="浦发银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国银行">
+										<img src="../img/shopCart/BOC.png" alt="中国银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+							</ul>
+							<!--快捷支付-->
+							<ul class="tab-pane fade" id="nwchain_pay">
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="招商银行">
+										<img src="../img/shopCart/CMB.png" alt="招商银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国工商银行">
+										<img src="../img/shopCart/ICBC.png" alt="中国工商银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国建设银行">
+										<img src="../img/shopCart/CCB.png" alt="中国建设银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="交通银行">
+										<img src="../img/shopCart/BCM.png" alt="交通银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li><li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国农业银行">
+										<img src="../img/shopCart/ABC.png" alt="中国农业银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中信银行">
+										<img src="../img/shopCart/CITIC.png" alt="中信银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="浦发银行">
+										<img src="../img/shopCart/SPDB.png" alt="浦发银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+								<li class="" >
+									<div class="act-line"></div>
+									<div class="pay_typeIco tooltip-test clearfix" title="中国银行">
+										<img src="../img/shopCart/BOC.png" alt="中国银行"/>
+										<i></i>
+									</div>
+									<div class="payTool-descr clearfix"></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="payBtn clearfix">
+						<li>
+							<button class="confirmPay pull-right">确认支付</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer clearfix">
+				<footer>
+					<div class="warp clearfix">
+						<div class="vmall_logo_01 pull-left">
+							<img src="../img/shopCart/Vmall.png"/>
+						</div>
+						<div class="certification_info pull-left">
+							<p>
+								<a href="https://www.vmall.com/help/faq-2635.html" target="_blank">隐私政策</a>
+								<a href="https://www.vmall.com/help/faq-778.html" target="_blank">服务协议</a> Copyright @ 2012-2017 VMALL.COM 版权所有 保留一切权利
+							</p>
+							<p>
+								<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010009" target="_blank">
+									<span style="font-size:15px;font-family:宋体">
+										<span style="font-size:12px;font-family:arial,helvetica,sans-serif;"> 苏公网安备</span>
+										<span style="font-size:12px;font-family:arial,helvetica,sans-serif;"> 32011402010009号</span>
+									</span>
+								</a>
+								|
+								<a href="http://www.miitbeian.gov.cn" target="_blank"> 苏ICP备09062682号-9</a>
+								 | 增值电信业务经营许可证：苏B2-20130048 |
+								 <a href="https://res.vmallres.com/pimages//sale/2016-10/20161009102851799.jpg" target="_blank">网络文化经营许可证：苏网文[2015] 1599-026号</a>
+							</p>
+						</div>
+						<div class="certification_ico pull-right">
+							<a href="http://odr.jsdsgsxt.gov.cn:8081/mbm/entweb/elec/certView.shtml?siteId=052c2cbca0b64d2b88ac4b7775ff40ce" target="_blank">
+							<img src="../img/shopCart/20161224180914742.jpg"/>	
+							<img src="../img/shopCart/20160226162415360.png" style="float:none;width:90px;height:32px;"/>
+							</a>
+							<a href="https://ss.knet.cn/verifyseal.dll?sn=e13010932010038497pwz6000000&trustKey=dn&trustValue=vmall.com" target="_blank">
+								<img src="../img/shopCart/20160226162521265.png" style="width:90px;height:32px;float:none;"/>
+							</a>
+							<a href="https://search.szfw.org/cert/l/CX20121017001773002082" target="_blank">
+								<img src="../img/shopCart/20160226162531395.png" style="width:90px;height:32px;float:none;"/>
+							</a>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	
+		<script type = "text/javascript" src = "../js/require.js" defer async = "true" data-main = "../js/main-shopCart"></script>
+	</body>
+</html>

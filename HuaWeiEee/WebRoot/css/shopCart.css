@@ -1,0 +1,380 @@
+em {
+  font-style: normal;
+  font-weight: 400; }
+
+.sc {
+  background: #f5f5f5;
+  min-width: 1200px; }
+
+.shortcut-frame {
+  background: #fff; }
+
+.header {
+  height: 50px;
+  padding: 10px 0;
+  background: #fff;
+  position: relative; }
+
+.order-header {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.layout {
+  width: 1200px;
+  margin: 0 auto; }
+
+.layout::before, .layout::after {
+  content: "";
+  display: table; }
+
+.layout::after {
+  clear: both; }
+
+.logo {
+  float: left;
+  margin-right: 40px;
+  width: 240px;
+  height: 50px; }
+  .logo a {
+    float: left;
+    display: inline-block; }
+
+.logo-word {
+  width: auto;
+  height: auto; }
+  .logo-word span {
+    margin-left: 26px;
+    font-size: 22px;
+    line-height: 50px; }
+
+.progress-area {
+  margin-top: 2px;
+  margin-right: 10px; }
+  .progress-area div {
+    width: 425px;
+    height: 50px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: transparent url(../img/shopCart/sprites6.png) scroll no-repeat; }
+
+.progress-area-3 .progress-sc-area {
+  background-position: 0 0; }
+
+.progress-area-3 .progress-co-area {
+  background-position: 0 -50px; }
+
+.progress-area-3 .progress-sso-area {
+  background-position: 0 -100px; }
+
+.login-prompt {
+  border: 1px solid #eace85;
+  background: #fffdee;
+  color: #ca141d;
+  line-height: 48px;
+  padding: 0 20px;
+  margin-top: 10px; }
+  .login-prompt:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: url(../img/shopCart/icon-tips01.png) no-repeat;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-right: 3px; }
+  .login-prompt a {
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background: #ca141d;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 2px; }
+
+.hr-20 {
+  clear: both;
+  height: 20px; }
+
+.hr-60 {
+  clear: both;
+  height: 60px; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.icon-choose-normal {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url(../img/shopCart/icon-order.png) -15px -66px no-repeat;
+  cursor: pointer; }
+
+.icon-choose {
+  background-position: -29px -66px; }
+
+.sc-pro-title {
+  background: #fff;
+  line-height: 40px;
+  padding-left: 40px;
+  color: #a4a4a4; }
+  .sc-pro-title label {
+    float: left;
+    width: 150px; }
+  .sc-pro-title .icon-choose-normal {
+    position: relative;
+    top: 2px;
+    margin: 0 13px 0 3px; }
+  .sc-pro-title ul {
+    float: left; }
+  .sc-pro-title li {
+    float: left;
+    width: 100px;
+    margin-left: 30px;
+    min-height: 14px;
+    text-align: center; }
+  .sc-pro-title li:first-child {
+    width: 450px;
+    text-align: left;
+    margin-left: 0; }
+
+.sc-empty {
+  padding-top: 135px;
+  height: 365px;
+  background: #fff;
+  text-align: center;
+  color: #7f7f7f;
+  font-size: 14px; }
+  .sc-empty .icon-minicart {
+    background: url(../img/shopCart/icon-header-minicart.png) no-repeat;
+    display: block;
+    height: 100px;
+    margin: 0 auto 36px;
+    width: 100px; }
+  .sc-empty p {
+    font-size: 18px;
+    color: #a4a4a4;
+    margin-bottom: 16px; }
+  .sc-empty a {
+    width: 172px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    background: #ca141d;
+    border-radius: 2px; }
+
+.sc-pro-list {
+  background: #fff;
+  padding-left: 40px;
+  margin-top: 10px;
+  padding-top: 20px; }
+  .sc-pro-list .icon-choose-normal {
+    float: left;
+    margin: 43px 13px 0 3px; }
+  .sc-pro-list ul {
+    float: left; }
+  .sc-pro-list li {
+    float: left;
+    width: 100px;
+    margin-left: 30px;
+    min-height: 14px;
+    text-align: center; }
+  .sc-pro-list li:first-child {
+    width: 450px;
+    text-align: left;
+    margin-left: 0; }
+
+.p-stock {
+  text-align: center; }
+
+.p-stock-area {
+  display: block;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  margin: 0 auto;
+  width: 63px;
+  height: 44px; }
+  .p-stock-area .p-stock-text {
+    float: left;
+    width: 41px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: center;
+    border: 0; }
+  .p-stock-area .p-stock-btn {
+    width: 22px;
+    float: left; }
+    .p-stock-area .p-stock-btn:before {
+      content: "";
+      width: 1px;
+      height: 44px;
+      background: #e2e2e2;
+      float: left; }
+    .p-stock-area .p-stock-btn a {
+      display: block;
+      font-size: 16px;
+      width: 22px;
+      height: 21px;
+      line-height: 22px;
+      text-align: center;
+      color: #777;
+      font-weight: bold; }
+      .p-stock-area .p-stock-btn a:first-child {
+        border-bottom: 1px solid #e2e2e2; }
+    .p-stock-area .p-stock-btn .disabled {
+      color: #c4c4c4;
+      cursor: not-allowed; }
+
+.sc-pro-area {
+  float: left;
+  width: 1130px;
+  font-size: 14px; }
+  .sc-pro-area .sc-pro-main {
+    margin-bottom: 18px;
+    position: relative; }
+  .sc-pro-area .p-img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    user-select: none; }
+    .sc-pro-area .p-img img {
+      width: 100%;
+      height: 100%; }
+  .sc-pro-area .p-price-total {
+    color: #ca141d;
+    font-weight: bold; }
+  .sc-pro-area .p-del {
+    color: #a4a4a4; }
+
+.sc-pro-parts {
+  margin-bottom: 20px; }
+
+.sc-pro-parts-list {
+  background: #f5f5f5;
+  border-bottom: 2px solid #fff;
+  width: 1070px;
+  padding: 16px 0 0 20px;
+  position: relative; }
+  .sc-pro-parts-list h2 {
+    float: left;
+    width: 100px;
+    line-height: 1;
+    margin-top: 4px;
+    font-size: 100%;
+    font-weight: 400; }
+  .sc-pro-parts-list ul {
+    width: 970px;
+    float: right;
+    margin-bottom: 20px; }
+  .sc-pro-parts-list .p-img {
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-top: 4px; }
+    .sc-pro-parts-list .p-img img {
+      user-select: none; }
+  .sc-pro-parts-list .p-name {
+    white-space: nowrap; }
+    .sc-pro-parts-list .p-name .p-sku {
+      margin-left: 7px; }
+  .sc-pro-parts-list:first-child:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #f5f5f5;
+    position: absolute;
+    top: -7px;
+    margin-left: 23px;
+    z-index: 2; }
+
+.sc-total-fixed {
+  background: #FFF;
+  min-width: 1200px;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 -4px 4px 0 rgba(121, 121, 121, 0.2);
+  height: 60px; }
+
+.sc-total-tool {
+  background: #fff;
+  height: 60px;
+  margin-top: 10px; }
+  .sc-total-tool .sc-total-control {
+    float: left;
+    line-height: 60px; }
+    .sc-total-tool .sc-total-control label {
+      float: left;
+      margin-left: 40px;
+      user-select: none; }
+    .sc-total-tool .sc-total-control .icon-choose-normal {
+      position: relative;
+      top: 2px;
+      margin: 0 13px 0 3px; }
+    .sc-total-tool .sc-total-control a {
+      float: left;
+      margin-left: 20px; }
+  .sc-total-tool .sc-total-btn {
+    float: right; }
+    .sc-total-tool .sc-total-btn a {
+      width: 180px;
+      height: 60px;
+      line-height: 60px;
+      display: block;
+      background: #ca151e;
+      font-size: 18px;
+      color: #fff;
+      text-align: center; }
+  .sc-total-tool .sc-total-price {
+    float: right;
+    padding-right: 30px;
+    margin-top: 7px;
+    text-align: right; }
+    .sc-total-tool .sc-total-price p {
+      font-size: 14px;
+      position: relative; }
+      .sc-total-tool .sc-total-price p span {
+        color: #ca151e;
+        font-size: 18px;
+        font-weight: bold; }
+      .sc-total-tool .sc-total-price p em {
+        width: 12px;
+        height: 12px;
+        display: block;
+        position: absolute;
+        right: -18px;
+        top: 7px; }
+        .sc-total-tool .sc-total-price p em:before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          display: block;
+          cursor: pointer;
+          background: url(../img/shopCart/icon-order.png) -22px -137px no-repeat; }
+    .sc-total-tool .sc-total-price .total-choose {
+      color: #a4a4a4; }
+      .sc-total-tool .sc-total-price .total-choose em {
+        color: #ca151e;
+        margin: 0 5px;
+        font-weight: bold;
+        font-style: normal; }
+      .sc-total-tool .sc-total-price .total-choose span {
+        color: #3a3a3a; }

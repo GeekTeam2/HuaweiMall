@@ -1,0 +1,13 @@
+require({
+	paths:{
+		jquery:"jquery",
+		shopCart:"module-shopCart",
+		payment:"module-payment"
+	}
+})
+require(["jquery","shopCart"],function($,shopCart){
+	shopCart.shopCart();
+})
+require(["jquery","payment"],function($,payment){
+	payment.payment();
+})

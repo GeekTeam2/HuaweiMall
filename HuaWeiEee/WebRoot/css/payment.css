@@ -1,0 +1,339 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto; }
+
+.container::before, .container::after {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+.container::after {
+  clear: both; }
+
+.clearfix {
+  clear: both; }
+
+.clearfix::before, .clearfix::after, .nav-tabs::after, .nav-tabs::before {
+  content: " ";
+  line-height: 0;
+  display: table; }
+
+.clearfix::after, .nav-tabs::after {
+  clear: both; }
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  display: inline-block; }
+
+span {
+  display: inline-block; }
+
+i {
+  font-style: normal; }
+
+.warp {
+  width: 1200px;
+  margin: 0px auto; }
+
+.logo {
+  height: 104px; }
+  .logo .logo_name {
+    width: 100%;
+    height: 65px;
+    margin-top: 40px; }
+    .logo .logo_name .huawei_logo {
+      display: inline-block;
+      width: 188px;
+      height: 28px;
+      margin-top: -10px; }
+    .logo .logo_name span {
+      line-height: 20px;
+      margin-left: 13px;
+      color: #343434;
+      letter-spacing: 1px;
+      font-size: 16px;
+      padding: 0px 13px;
+      border-left: 1px solid #e8e8e8; }
+
+.cashier_order_area {
+  width: 100%;
+  border-top: 3px solid #63aa56; }
+
+.cashier_orderInfo {
+  width: 100%;
+  background: #effaed; }
+
+.orderInfo_img {
+  width: 120px; }
+  .orderInfo_img img {
+    width: 64px;
+    height: 64px;
+    margin: 30px 21px 0px 34px; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.orderInfo_words {
+  width: 1058px;
+  padding: 28px 22px 20px 0px; }
+
+.orderInfo_words_01, .orderDetails {
+  position: relative;
+  width: 100%; }
+  .orderInfo_words_01 .orderWords01, .orderDetails .orderWords01 {
+    line-height: 26px; }
+    .orderInfo_words_01 .orderWords01 h4, .orderDetails .orderWords01 h4 {
+      float: left;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      color: #53a724; }
+    .orderInfo_words_01 .orderWords01 .orderNum, .orderDetails .orderWords01 .orderNum {
+      color: #da3232;
+      margin-left: 15px; }
+      .orderInfo_words_01 .orderWords01 .orderNum span:first-of-type, .orderDetails .orderWords01 .orderNum span:first-of-type {
+        color: #333333;
+        font-weight: 600; }
+  .orderInfo_words_01 h5, .orderDetails h5 {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+    color: #333333; }
+    .orderInfo_words_01 h5 em, .orderDetails h5 em {
+      font-style: normal;
+      color: #DA3232;
+      font-weight: 600; }
+
+.payNumAll {
+  font-size: 24px;
+  color: #DA3232;
+  margin-right: 6px;
+  font-weight: 600; }
+
+.payTitle {
+  color: #000000;
+  line-height: 20px;
+  margin-top: 6px; }
+
+.orderInfo_show {
+  width: 64px;
+  line-height: 20px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px;
+  color: #333333; }
+  .orderInfo_show img {
+    width: 8px;
+    height: 6px;
+    margin-top: 7px; }
+
+#payTab {
+  position: relative;
+  margin-top: 46px;
+  margin-bottom: 0;
+  z-index: 9; }
+
+.nav {
+  margin-bottom: 20px;
+  margin-left: 0;
+  list-style: none; }
+
+.nav-tabs {
+  border-bottom: 1px solid #ddd; }
+  .nav-tabs li {
+    margin-bottom: -1px;
+    float: left; }
+    .nav-tabs li a {
+      display: block;
+      width: 168px;
+      padding: 10px 0;
+      text-align: center;
+      margin-right: 0;
+      border-radius: 0;
+      border: 1px solid #CCCCCC;
+      border-left-color: transparent;
+      font-size: 14px;
+      color: #000000;
+      background: #F2F2F2;
+      line-height: 20px; }
+      .nav-tabs li a:hover {
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-bottom: 1px; }
+    .nav-tabs li:first-child a {
+      border-left-color: #CCCCCC; }
+  .nav-tabs .active a {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-bottom-color: transparent;
+    color: #555;
+    cursor: default; }
+    .nav-tabs .active a:hover {
+      border: 1px solid #CCCCCC;
+      border-bottom-color: transparent; }
+
+.EXPR {
+  position: relative; }
+  .EXPR a {
+    text-align: left !important;
+    padding-left: 12px !important;
+    width: 156px !important; }
+  .EXPR i {
+    display: block;
+    position: absolute;
+    width: 80px;
+    line-height: 20px;
+    top: 6px;
+    left: 64px;
+    padding-left: 15px;
+    color: #ffffff;
+    font-size: 12px;
+    z-index: 2; }
+  .EXPR img {
+    position: absolute;
+    width: 94px;
+    height: 20px;
+    top: 6px;
+    left: 64px;
+    z-index: 1; }
+
+.tab-content {
+  position: relative;
+  border: 1px solid #CCCCCC;
+  border-top: none;
+  padding: 37px 50px 37px 60px;
+  overflow: inherit;
+  z-index: 10; }
+  .tab-content .tab-pane {
+    display: none; }
+    .tab-content .tab-pane li {
+      position: relative;
+      display: inline-table;
+      width: 268px;
+      vertical-align: top;
+      padding-bottom: 16px; }
+      .tab-content .tab-pane li .act-line {
+        position: relative;
+        width: 100%;
+        height: 24px;
+        margin-top: 0;
+        font-size: 12px;
+        color: #4A4A4A;
+        letter-spacing: 0px; }
+        .tab-content .tab-pane li .act-line i {
+          display: inline-block;
+          line-height: 24px;
+          min-width: 26px;
+          padding: 0 7px;
+          text-align: center;
+          color: #ffffff; }
+        .tab-content .tab-pane li .act-line .recomType {
+          background: #DA3232; }
+    .tab-content .tab-pane .select .pay_typeIco {
+      border: 1px solid #DA3232; }
+      .tab-content .tab-pane .select .pay_typeIco i {
+        position: absolute;
+        width: 28px;
+        height: 24px;
+        bottom: 0;
+        right: -1px;
+        background: url(../img/shopCart/select_icon.png) no-repeat 0;
+        z-index: 10; }
+  .tab-content .active {
+    display: block; }
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  -moz-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear; }
+
+.in {
+  opacity: 1; }
+
+.pay_typeIco {
+  position: relative;
+  width: 256px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+  cursor: pointer; }
+  .pay_typeIco img {
+    width: auto;
+    height: 30px;
+    margin: 5px 0; }
+
+.payTool-descr {
+  margin-top: 5px;
+  width: 100%; }
+
+.payBtn {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 56px; }
+  .payBtn li {
+    height: 40px; }
+    .payBtn li .confirmPay {
+      display: inline-block;
+      width: 168px;
+      line-height: 40px;
+      float: right;
+      padding: 0;
+      font-size: 18px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      background: #DA3232;
+      color: #ffffff; }
+
+.footer {
+  position: relative;
+  margin-bottom: 0;
+  bottom: 0; }
+
+footer {
+  width: 100%;
+  height: 120px;
+  background: #e6e6e6;
+  z-index: 800;
+  display: block; }
+  footer a {
+    font-size: 12px; }
+  footer span {
+    display: inline-block;
+    font-size: 12px; }
+
+.warp {
+  width: 1200px;
+  margin: 0 auto; }
+  .warp .vmall_logo_01 {
+    width: 80px;
+    height: 34px;
+    margin-top: 43px; }
+  .warp .certification_info {
+    width: 640px;
+    margin-left: 34px;
+    padding-top: 22px; }
+    .warp .certification_info p {
+      line-height: 1.6;
+      color: #aeaeae; }
+    .warp .certification_info a {
+      display: inline-block;
+      color: #aeaeae; }
+      .warp .certification_info a:hover {
+        color: red; }
+  .warp .certification_ico {
+    width: auto;
+    height: 32px;
+    margin-top: 44px; }
