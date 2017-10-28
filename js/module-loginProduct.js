@@ -1,5 +1,6 @@
 define(function(){
 	var getProductInfo = function(){
+		func("red", "全网通标配版");
 		function func(color, sys){
 			$.ajax({
 				type:"POST",
