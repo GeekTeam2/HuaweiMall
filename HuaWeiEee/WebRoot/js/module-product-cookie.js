@@ -1,6 +1,8 @@
 define(function(){
 	var cart = function(){
+		
 		joinCart();
+
 		$("#cart_btn").click(function(color, capacity){
 			var goodsid = $(".product_right").find("h1").attr("id");
 			var color = $("#pro_sel_color").find(".detail_selected").attr("id");
@@ -49,10 +51,13 @@ define(function(){
 	}
 	
 	function joinCart(){
+
 		if(!$.cookie("goods")){
+			alert(1);
 			$(".minicart-empty").css("display", "block");
 			$(".minicart-content").css("display", "none");
 		}else{
+			alert(0);
 			$(".minicart-empty").css("display", "none");
 			$(".minicart-content").css("display", "block");
 			

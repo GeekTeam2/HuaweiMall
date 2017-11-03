@@ -4,10 +4,581 @@
 		<meta charset="UTF-8">
 		<title>Document</title>
 		<link href = "../css/myorder.css" type = "text/css" rel = "stylesheet"/>
+		<link href="../css/common.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<!-- 网页头部的代码 -->
-
+		<div class="shortcut-frame">
+			<div class="shortcut">
+				<div class="sc-sub">
+					<a href="https://mm.vmall.com/cw7x.html">
+						<ul>
+							<li class="first-child">
+								<a href="http://consumer.huawei.com/cn/" target="_blank">华为官网</a>
+							</li>
+							<li>
+								<a href="http://www.honor.cn/" target="_blank">荣耀官网</a>
+							</li>
+							<li>
+								<a href="http://club.huawei.com" target="_blank">花粉俱乐部</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/help/index.html">帮助中心</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/priority">V码(优购码)</a>
+							</li>
+							<li>
+								<a>Select Region</a>
+							</li>
+							<li>
+								<div class="s-dropdown">
+									<div class="dropdown-head">
+										<a class="dropdown-icon">更多精彩</a>
+									</div>
+									<div class="dropdown-body">
+										<dl>
+											<dt>
+												<a href="http://emui.huawei.com/cn/" target="_blank">EMUI</a>
+											</dt>
+											<dt>
+												<a href="http://appstore.huawei.com/" target="_blank">应用市场</a>
+											</dt>
+											<dt>
+												<a href="http://cloud.huawei.com" target="_blank">云服务</a>
+											</dt>
+											<dt>
+												<a href="http://developer.huawei.com/" target="_blank">开发者联盟</a>
+											</dt>
+										</dl>
+										<div class="code">
+											<a href="https://www.vmall.com/appdownload" target="_blank">
+												<img src="../img/index/qrcode_vmall_new_app01.png">
+											</a>
+											<p>
+												扫一扫，
+												<a href="https://www.vmall.com/appdownload" target="_blank">下载客户端</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<a></a>
+							</li>
+						</ul>
+				</div>
+				<div class="sc-main">
+					<ul>
+						<li class="first-child" id="unlogin-status">
+							<div class="i-login">
+								<a href="../html/login.html" id="btn-login">请登录</a>
+								&nbsp;&nbsp;
+								<a href="../html/enroll.html" id="btn-register">注册</a>
+							</div>
+						</li>
+						<li class="first-child" id="login-status">
+							<div class="i-login">
+								<a id="user-login"></a>
+								&nbsp;&nbsp;
+								<a href="" id="btn-logout">注销</a>
+							</div>
+						</li>
+						<li>
+							<a href="https://www.vmall.com/member/order?t=15079706783831507970860468">我的订单</a>
+						</li>
+						<li>
+							<div class="s-dropdown">
+								<div class="dropdown-head h-wide" id="minicart-head">
+									<a href="" class="icon-minicart">
+										<span>
+											购物车(
+											<span id="minicart-head-total">0</span>)
+										</span>
+									</a>
+								</div>
+								<div class="minicart-dropdown">
+									<div id="minicart-dropdown">
+										<div class="minicart-empty" id="cart-empty">
+											<p>
+												<span class="icon-minicart"></span>
+											</p>
+											<p>您的购物车是空的，赶紧选购吧</p>
+											<a href="">去逛逛吧</a>
+										</div>
+										<div class="minicart-content" id="cart-list">
+											<div class="cart_box">
+												
+											</div>
+											<div class="account">
+												<div class="sum_price">
+													<p class="sum_txt">总计：</p>
+													<p class="sum">
+														<span id="sum_now"></span>
+														<span id="sum_before"></span>
+													</p>
+												</div>
+												<a id="sum_count" href="shopCart.html">结算</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+		
+						</li>
+					</ul>
+				</div>
+				<span class="clear"></span>
+			</div>
+		</div>
+		
+		<div class="header-frame">
+			<div class="header">
+				<div class="left">
+					<div class="logo">
+						<a href="https://www.vmall.com/" title="Vmall.com - 华为商城">
+							<img src="../img/index/201706301129294766528.png" alt="Vmall.com - 华为商城">
+						</a>
+					</div>
+					<div class="nav">
+						<ul>
+							<li>
+								<a href="https://www.vmall.com/list-36" target="_blank">
+									<span>手机</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/list-40" target="_blank">
+									<span>笔记本 & 平板</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/list-59" target="_blank">
+									<span>穿戴</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/list-43" target="_blank">
+									<span>智能家居</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/list-54" target="_blank">
+									<span>通用配件</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.vmall.com/list-47" target="_blank">
+									<span>专属配件</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav-sub">
+						<div class="nav-sub-wrap">
+							<div class="p-title">
+								<div class="p1 left">
+									<a href="https://www.vmall.com/list-36" target="_blank">全部手机></a>
+								</div>
+								<div class="p2 left">
+									<a href="" target="_blank" class="title-name">荣耀</a>
+									<a href="" target="_blank" class="title-name">HUAWEI P系列</a>
+									<a href="" target="_blank" class="title-name">畅玩</a>
+									<a href="" target="_blank" class="title-name">HUAWEI Mate系列</a>
+									<a href="" target="_blank" class="title-name">HUAWEI nova系列</a>
+									<a href="" target="_blank" class="title-name">HUAWEI 麦芒系列</a>
+									<a href="" target="_blank" class="title-name">华为畅享系列</a>
+									<a href="" target="_blank" class="title-name">合约机</a>
+								</div>
+								<span class="clear"></span>
+							</div>
+							<ul class="nav-list">
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-sub-wrap">
+							<div class="p-title">
+								<div class="p1 left">
+									<a href="https://www.vmall.com/list-36" target="_blank">全部笔记本 & 平板></a>
+								</div>
+								<div class="p2 left">
+									<a href="" target="_blank" class="title-name">平板电脑</a>
+									<a href="" target="_blank" class="title-name">笔记本电脑</a>
+									<a href="" target="_blank" class="title-name">笔记本配件</a>
+								</div>
+								<span class="clear"></span>
+							</div>
+							<ul class="nav-list">
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-sub-wrap">
+							<div class="p-title">
+								<div class="p1 left">
+									<a href="https://www.vmall.com/list-36" target="_blank">穿戴></a>
+								</div>
+								<div class="p2 left">
+									<a href="" target="_blank" class="title-name">手环</a>
+									<a href="" target="_blank" class="title-name">手表</a>
+								</div>
+								<span class="clear"></span>
+							</div>
+							<ul class="nav-list">
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-sub-wrap">
+							<div class="p-title">
+								<div class="p1 left">
+									<a href="https://www.vmall.com/list-36" target="_blank">全部智能家居></a>
+								</div>
+								<div class="p2 left">
+									<a href="" target="_blank" class="title-name">子母路由</a>
+									<a href="" target="_blank" class="title-name">电视盒子</a>
+									<a href="" target="_blank" class="title-name">路由器</a>
+									<a href="" target="_blank" class="title-name">电力猫</a>
+									<a href="" target="_blank" class="title-name">随行wifi</a>
+									<a href="" target="_blank" class="title-name">HUAWEI HiLink生态产品</a>
+								</div>
+								<span class="clear"></span>
+							</div>
+							<ul class="nav-list">
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-sub-wrap">
+							<div class="p-title">
+								<div class="p1 left">
+									<a href="https://www.vmall.com/list-36" target="_blank">全部通用配件></a>
+								</div>
+								<div class="p2 left">
+									<a href="" target="_blank" class="title-name">移动电源</a>
+									<a href="" target="_blank" class="title-name">耳机</a>
+									<a href="" target="_blank" class="title-name">音箱</a>
+									<a href="" target="_blank" class="title-name">自拍杆/支架</a>
+									<a href="" target="_blank" class="title-name">充电器/线材</a>
+									<a href="" target="_blank" class="title-name">U盘/存储卡</a>
+									<a href="" target="_blank" class="title-name">排插</a>
+									<a href="" target="_blank" class="title-name">摄像机/镜头</a>
+									<a href="" target="_blank" class="title-name">智能硬件</a>
+									<a href="" target="_blank" class="title-name">生活周边</a>
+								</div>
+								<span class="clear"></span>
+							</div>
+							<ul class="nav-list">
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-sub-wrap">
+							<div class="p-title">
+								<div class="p1 left">
+									<a href="https://www.vmall.com/list-36" target="_blank">全部专属配件></a>
+								</div>
+								<div class="p2 left">
+									<a href="" target="_blank" class="title-name">保护壳</a>
+									<a href="" target="_blank" class="title-name">保护套</a>
+									<a href="" target="_blank" class="title-name">贴膜</a>
+									<a href="" target="_blank" class="title-name">盒子专属配件</a>
+									<a href="" target="_blank" class="title-name">表带</a>
+								</div>
+								<span class="clear"></span>
+							</div>
+							<ul class="nav-list">
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+								<li class="grid-items">
+									<a class="thumb" target="_blank" href="">
+										<p class="grid-img">
+											<img src="../img/index/142_142_1488120495681mp.jpg">
+										</p>
+										<h3 class="grid-title">HUAWEI P10</h3>
+										<p class="grid-price">￥3988</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="search-bar">
+						<div class="search-bar-form">
+							<form method="get">
+								<input type="text" class="text" maxlength="100" id="search-kw" name="">
+								<input type="submit" name="" class="button" value="搜索">
+							</form>
+						</div>
+						<div class="search-bar-key">
+							<div class="bar-keyword">
+								<a href="" target="_blank">HUAWEI Mate 10</a>
+								<a href="" target="_blank">荣耀8青春版</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<span class="clear"></span>
+			</div>
+		</div>
 		<!-- 订单页正文部分 -->
 		<div class = "myorder-hr"></div>
 		<div class="g">
