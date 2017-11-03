@@ -22,7 +22,7 @@ require(["jquery", "backToTop"],function($, backToTop){
 })
 
 require(["jquery","product","cookie","loginProduct"],function($, product, cookie, loginProduct){
-	loginProduct.getProductInfo();
+	loginProduct.getProductInfo("荣耀V9");
 	product.showActivity($("#activity_list"), $("#activity_list_details"));
 	product.movePage($("#product_gallery_back"), $("#product_gallery_next"), $("#pro_gallerys"), 0);
 	product.selectGoods();

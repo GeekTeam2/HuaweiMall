@@ -1,11 +1,11 @@
 define(["jquery","cookie","goodsCookie"],function($,cookie, goodsCookie){
 	
 	
-	var getProductInfo = function(){
+	var getProductInfo = function(version){
 		
-		var type = $.cookie("version");
-		alert(type);
-		init("荣耀V9");
+		// var type = $.cookie("version");
+		// alert(type);
+		init(version);
 		function init(version){
 			$.ajax({
 				type:"POST",
@@ -34,20 +34,20 @@ define(["jquery","cookie","goodsCookie"],function($,cookie, goodsCookie){
 					$("#sys_ul").find("li").eq(0).attr("class", "detail_selected");
 					
 					
-					itemInfo("荣耀V9","极光蓝","全网通标配版");
-					itemImg("荣耀V9","极光蓝");
+					itemInfo(version,"极光蓝","全网通标配版");
+					itemImg(version,"极光蓝");
 					
 					$("#color_ul").on("click", "li", function(){
 						var color = $(this).find("span").html();
 						var sys = $("#sys_ul").find(".detail_selected").find("span").html();
-						itemImg("荣耀V9", color);
-						itemInfo("荣耀V9", color, sys);
+						itemImg(version, color);
+						itemInfo(version, color, sys);
 					})
 					
 					$("#sys_ul").on("click", "li", function(){
 						var sys = $(this).find("span").html();
 						var color = $("#color_ul").find(".detail_selected").find("span").html();
-						itemInfo("荣耀V9", color, sys);
+						itemInfo(version, color, sys);
 					})
 					goodsCookie.cart();
 				}

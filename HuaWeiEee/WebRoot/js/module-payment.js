@@ -58,6 +58,13 @@ define(function(){
 	                "m:s": m + "分" + s + "秒"
 	            };
 	        }
+	        $(".confirmPay").click(function(){
+	        	var sure = confirm("确认支付？")
+				if(sure == true){
+					alert("支付成功!");
+					location.href="myorder.html";
+				}
+	        })
 	
 	        return this;
 	    }

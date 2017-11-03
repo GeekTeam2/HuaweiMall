@@ -75,19 +75,44 @@ define(function(){
 		})
 		/*商品数量为1时，减号 不可用*/
 		//当前商品的数量
-		var num = parseInt($(".sc-pro-list").find("#quantity-goods").val());
-		if(num == 1){
-			$("#pro-quantity-minus").addClass("disabled");
-		}else{
-			$("#pro-quantity-minus").removeClass("disabled");
+		var num = parseInt($(".sc-pro-list").find(".p-stock-text").val());
+		
+		function status(){
+			if(num == 1){
+				$("#pro-quantity-minus").addClass("disabled");
+			}else{
+				$("#pro-quantity-minus").removeClass("disabled");
+			}
 		}
+		status();
+		
 		/*商品数量  + 操作*/
 		$(".sc-pro-list").delegate("#pro-quantity-plus",'click',function(){
-			
+			$("#order-pro-2").find("#pro-quantity-minus").removeClass("disabled");
+			var index = $(this).parents(".sc-pro-list").index();
+			var money = parseInt($(this).parents(".sc-pro-list").find(".p-price").find("span").html());
+			num++;
+			money = num * money;
+			status();
+			$(".sc-pro-list").eq(index).find(".p-stock-text").val(num);
+			$(".sc-pro-list").eq(index).find(".p-price-total").find("span").html(money);
 		})
+		
 		/*商品数量   - 操作*/
 		$(".sc-pro-list").delegate("#pro-quantity-minus",'click',function(){
-			
+			var index = $(this).parents(".sc-pro-list").index();
+			var money = parseInt($(this).parents(".sc-pro-list").find(".p-price").find("span").html());
+			num--;
+			if(num <= 0){
+				num = 1;
+				$("#order-pro-2").find("#pro-quantity-minus").addClass("disabled");
+				money = money;
+			}else{
+				money = num * money;
+			}
+			status();
+			$(".sc-pro-list").eq(index).find(".p-stock-text").val(num);
+			$(".sc-pro-list").eq(index).find(".p-price-total").find("span").html(money);
 		})
 		
 		/*商品删除 操作*/
