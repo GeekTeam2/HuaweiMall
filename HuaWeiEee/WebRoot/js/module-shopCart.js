@@ -96,6 +96,7 @@ define(function(){
 			status();
 			$(".sc-pro-list").eq(index).find(".p-stock-text").val(num);
 			$(".sc-pro-list").eq(index).find(".p-price-total").find("span").html(money);
+			checkNum();
 		})
 		
 		/*商品数量   - 操作*/
@@ -113,6 +114,7 @@ define(function(){
 			status();
 			$(".sc-pro-list").eq(index).find(".p-stock-text").val(num);
 			$(".sc-pro-list").eq(index).find(".p-price-total").find("span").html(money);
+			checkNum();
 		})
 		
 		/*商品删除 操作*/
